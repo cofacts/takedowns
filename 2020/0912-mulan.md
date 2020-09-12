@@ -26,4 +26,4 @@ https://cofacts.g0v.tw/article/1d0cogd5pt6b0
 > Tel: <redacted>
 
 ## 處理
-Cofacts 已經在 2020-09-13 修改資料庫，將 https://cofacts.g0v.tw/article/1d0cogd5pt6b0 中的侵權連結，修改為「`[已移除]`」，並且清除相關 `hyperlinks` 存檔欄位。
+Cofacts 已經在 2020-09-12 修改資料庫，將 https://cofacts.g0v.tw/article/1d0cogd5pt6b0 中的侵權連結，修改為「`[已移除]`」，並且清除相關 `hyperlinks` 存檔欄位。
