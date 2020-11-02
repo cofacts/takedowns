@@ -7,4 +7,4 @@ https://cofacts.org/reply/oqUlhXUB9w1KR1Ik2a6H
 
 ## 處理
 
-已經按照原回應作者的需求移除個人資料。
+已經按照原回應作者的需求，從回應文字中移除誤植的個人資料。
