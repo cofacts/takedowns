@@ -7,8 +7,8 @@ Cofacts 網站使用者 yegogo 在 Cofacts 張貼下列廣告訊息：
 - https://cofacts.org/reply/y6ixInYB9w1KR1IksUyM
 - https://cofacts.org/reply/xaixInYB9w1KR1IkU0wR
 - https://cofacts.org/reply/v6iwInYB9w1KR1Ik_Uy5
-- https://cofacts.org/reply/uaiwInYB9w1KR1IkqEy
-- https://cofacts.org/reply/s6iwInYB9w1KR1IkSkw
+- https://cofacts.org/reply/uaiwInYB9w1KR1IkqEy-
+- https://cofacts.org/reply/s6iwInYB9w1KR1IkSkw-
 - https://cofacts.org/reply/raivInYB9w1KR1Ik5Uzm
 - https://cofacts.org/reply/p6ivInYB9w1KR1IkE0xF
 - https://cofacts.org/reply/pqiuInYB9w1KR1Ikh0xE
