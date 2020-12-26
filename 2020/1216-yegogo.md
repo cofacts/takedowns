@@ -29,13 +29,16 @@ Cofacts 網站使用者 yegogo 在 Cofacts 張貼下列廣告訊息：
 - https://cofacts.org/reply/U6hEiXYB9w1KR1IkZnKR
 - https://cofacts.org/reply/TahDiXYB9w1KR1Ik_HKs
 - https://cofacts.org/reply/R6hDiXYB9w1KR1Ikk3KO
+- https://cofacts.org/reply/bKhBnXYB9w1KR1IkwHrc
+- https://cofacts.org/reply/ZqhBnXYB9w1KR1IkVnoX
+- https://cofacts.org/reply/YKhAnXYB9w1KR1Ik33qk
 
 此使用者已是累犯，過去已在社團諮詢過，故管理團隊將逕行刪除：
 https://www.facebook.com/groups/cofacts/permalink/2866149510283526/
 
 ## 處理
 
-2020-12-16, 2020-12-17, 2020-12-19, 2020-12-21, 2020-12-22 Cofacts 團隊修改資料庫，手動將此回應的狀態調成「已刪除」。 Chatbot 使用者將無法看到這則回應，不過此回應仍可在下面的狀況瀏覽到：
+2020-12-16, 2020-12-17, 2020-12-19, 2020-12-21, 2020-12-22, 2020-12-27 Cofacts 團隊修改資料庫，手動將此回應的狀態調成「已刪除」。 Chatbot 使用者將無法看到這則回應，不過此回應仍可在下面的狀況瀏覽到：
 
 - 直接造訪上面的回應頁面。
 - 前往被回應的訊息頁面，查看被刪除的回應。
