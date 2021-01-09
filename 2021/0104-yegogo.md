@@ -9,6 +9,9 @@ Cofacts 網站使用者 yegogo 在 Cofacts 張貼下列廣告訊息：
 - https://cofacts.org/reply/jKiEy3YB9w1KR1IkfokZ
 - https://cofacts.org/reply/hqiDy3YB9w1KR1IksYlu
 - https://cofacts.org/reply/gKiDy3YB9w1KR1IkOYlg
+- https://cofacts.org/reply/0KhJ5XYB9w1KR1IkapIZ
+- https://cofacts.org/reply/zKhI5XYB9w1KR1IkhZIX
+- https://cofacts.org/reply/xqhI5XYB9w1KR1IkG5I3
 
 此使用者已是累犯，過去已在社團諮詢過，故管理團隊將逕行刪除：
 https://www.facebook.com/groups/cofacts/permalink/2866149510283526/
