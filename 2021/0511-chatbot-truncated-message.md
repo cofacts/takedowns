@@ -1,4 +1,4 @@
-#「印度病毒己經感染到鳥」遭截斷訊息
+# 「印度病毒己經感染到鳥」遭截斷訊息
 
 ## 說明
 
@@ -19,3 +19,5 @@ Cofacts WG 研判：
 Cofacts WG 將會
 1. 將 https://cofacts.tw/article/zpjwf7f14lbl 的 `印度病毒己經感染到鳥` 移除，讓後來的使用者不再 match 到此篇訊息，並使用「我想補充」功能附上takedown notice 連結
 2. 靜待訊息全文進入資料庫
+
+上揭處理皆以公示於編輯社團貼文 https://www.facebook.com/groups/cofacts/permalink/2992380564327086 之中。
