@@ -10,4 +10,4 @@ https://cofacts.tw/article/1t2nff4vaf372
 Cofacts 不會移除具有公共利益可能性的文章，如果片段刪除或隱去個人資料的情況，而內文仍然適合事實查核或者具公共利益效果，將視實際發生情況特別處理。
 
 ## 處理
-2021-05-26 Cofacts 團隊修改資料庫，將https://cofacts.g0v.tw/article/3enhvccv7hnud 的內文替換為「內文含有隱私資訊」等語。
+2021-05-26 Cofacts 團隊修改資料庫，將 https://cofacts.tw/article/1t2nff4vaf372 的內文替換為「內文含有隱私資訊」等語。
