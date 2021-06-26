@@ -8,4 +8,4 @@ Cofacts 內容下架與修改公告
 Reference
 -----
 
-這份公告檔案庫的做法，是參照 Github 透明處理 [DCMA takedown](https://help.github.com/en/github/site-policy/dmca-takedown-policy) 與 [gov takedown](https://github.com/github/gov-takedowns) 的機制。
+這份公告檔案庫的做法，是參照 Github 透明處理 [DMCA takedown](https://help.github.com/en/github/site-policy/dmca-takedown-policy) 與 [gov takedown](https://github.com/github/gov-takedowns) 的機制。
