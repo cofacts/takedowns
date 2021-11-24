@@ -1,7 +1,7 @@
 # 1124 含個資之訊息遭公開
 
 ## 說明
-2021/05/26 Cofacts slack channel 接獲通知，告知下面文章具有當事人的本名、身分證字號與地址。
+2021/11/23 Cofacts slack channel 接獲通知，告知下面文章具有當事人的本名、身分證字號與地址。
 
 https://cofacts.tw/article/1ambr7sq4vkge
 
