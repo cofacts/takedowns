@@ -2,18 +2,19 @@
 
 ## 事由
 
-日前有立委辦公室成員尋[《Cofacts 真的假的 網站使用者條款》第六段之聯絡方式](https://github.com/cofacts/rumors-site/blob/master/LEGAL.md#%E5%85%AD%E8%81%AF%E7%B5%A1%E6%96%B9%E5%BC%8F)向 Cofacts 真的假的工作小組（Cofacts WG）反應，
+日前有立委辦公室成員循[《Cofacts 真的假的 網站使用者條款》第六段之聯絡方式](https://github.com/cofacts/rumors-site/blob/master/LEGAL.md#%E5%85%AD%E8%81%AF%E7%B5%A1%E6%96%B9%E5%BC%8F)向 Cofacts 真的假的工作小組（Cofacts WG）反應，
 任何人使用「立法委員手機號碼」作為關鍵字 google，即可進入下面頁面，並查詢到立法委員之手機號碼，並希望 Cofacts WG 能對該回報訊息之內容調整打碼：
 https://cofacts.tw/article/5661460621638-rumor
 
 ## 判定
 
-Cofacts WG 透過無痕瀏覽視窗實際測試，發現回報人回報之狀況屬實，關鍵字「立法委員手機號碼」的搜尋結果第一位，即是其所希望調整的訊息。
+Cofacts WG 透過無痕瀏覽視窗實際測試，發現其提及之狀況屬實，關鍵字「立法委員手機號碼」的搜尋結果第一位，即是其所希望調整的訊息。
 ![image](https://user-images.githubusercontent.com/108608/154399971-7de84781-d2fa-40d2-bb13-320bd1ba545a.png)
 
-Cofacts WG 處理此請求時，考量下列兩者的折衝，來進行判定。
+Cofacts WG 處理此請求時，會權衡以下兩者來進行判定。
 
 ### 公共利益
+
 過去 Cofacts WG 針對隱私相關的下架公告（[2020/06/10](https://github.com/cofacts/takedowns/blob/master/2020/0610-privacy.md)、[2020/09/04](https://github.com/cofacts/takedowns/blob/master/2020/0904-privacy.md)、[2021/05/26](https://github.com/cofacts/takedowns/blob/master/2021/0526-privacy.md)），
 均提及「公共利益可能性」的處理原則。
 
