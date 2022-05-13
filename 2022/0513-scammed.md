@@ -1,4 +1,4 @@
-2022/5/13 公告違規帳號與處理方式
+2022/5/13 移除詐騙相關資訊公告
 =========
 
 以下 Cofacts 真的假的網站使用者發表之內容，遭[其他使用者回報](https://docs.google.com/spreadsheets/d/e/2PACX-1vRdcwXdC36xfgXfSMSk527Zbel9A-__vwRXkQ0NjkzSXoSPETCFc7sI7SoaAFdPCfskugtQL-Md8JgH/pubhtml?gid=438362561&single=true)。經討論，將對相關內容進行處置如下。
