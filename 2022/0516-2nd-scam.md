@@ -17,6 +17,8 @@
 | [李明](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=SEZHzIABLBWbhK-vPeZP) | 網友補充<br>`我相信很多人和我一樣用社交軟體聊天也在網路上認識朋友，但⋯⋯` | 2022/5/16 18:00:07 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [張宇](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=_kb_2YABLBWbhK-vVvVa) | 網友補充<br>`李振義就是詐騙集團，我朋友被李振義騙了135萬，被騙的錢⋯⋯` | 2022/5/19 10:09:09 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [陳良](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=gypD6oAB1n3BdTj8A8xk) | 網友補充<br>`我是被QTC新時代詐騙的，在交友軟體上一個叫陳雅琪的私訊⋯⋯` | 2022/5/24 09:35:09 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [hi P](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=9Cov-4AB1n3BdTj8V-Af) | 網友補充<br>`李振義真的是一個大騙子，直播課堂上把自己講的義診言詞/把⋯⋯` | 2022/5/25 21:23:30 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+
 
 （若有新內容樣態類似，將會隨時增補於上表）
 
