@@ -20,6 +20,8 @@
 | [hi P](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=9Cov-4AB1n3BdTj8V-Af) | 網友補充<br>`李振義真的是一個大騙子，直播課堂上把自己講的義診言詞/把⋯⋯` | 2022/5/25 21:23:30 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Niki](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=zEYL0IABLBWbhK-vkup_) | 網友補充<br>`譚律師團隊專業處理各種詐騙資金糾紛，股票投資 、交友詐騙⋯⋯` | 2022/6/1 21:22:33 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Maran BDockins](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=61MsOYEBZ4FY5vnA7wJq) | 網友補充<br>`如果有被詐騙或者跨國被詐騙造成財產損失你可以留言聯絡我們⋯⋯` | 2022/6/6 21:24:11 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [【抵制詐騙】了解更多詐騙知識防止詐騙](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=K1NdPYEBZ4FY5vnAugds) | 網友補充<br>`現在太多的詐騙集團來擾亂市場，導致大家現在根本不知道哪個⋯⋯` | 2022/6/8 20:58:27 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [【抵制詐騙】了解更多詐騙知識防止詐騙](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=K1NdPYEBZ4FY5vnAugds) | 網友補充<br>`現在太多的詐騙集團來擾亂市場，導致大家現在根本不知道哪個⋯⋯` | 2022/6/8 20:58:39 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 （若有新內容樣態類似，將會隨時增補於上表）
 
