@@ -9,6 +9,7 @@
 | [李金富](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=5lNVkIEBZ4FY5vnAr18C) | 網友補充<br>`FB，IG這些交友軟體成了詐騙的溫床，現在詐騙手段日新月⋯⋯` | 2022/6/24 11:25:36 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [susu lee](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=XlM-lYEBZ4FY5vnAk2UP) | 查核回應<br>`中国大陆网民无法访问FB,Google,youtube等⋯⋯` | 2022/6/24 18:33:58 | 此帳號僅有張貼過 VPN 宣傳內容，應為廣告帳號。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [徐梦](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=OVNMgIEBZ4FY5vnAj1Aq) | 網友補充<br>`這是真的哦 我和我老公就是在這裡認識的 我們已經結婚一年⋯⋯` | 2022/6/20 16:49:31 | 經查，原始訊息確實為交友詐騙網站。此遭檢舉之使用者僅有發表這一篇網友補充，替詐騙網站背書，應為詐騙之同夥。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [不平凡人](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=VFNTo4EBZ4FY5vnAOXPC) | 查核回應<br>`沒有問題，目前虛擬貨幣電子錢包在世界各地都有不同的交易所⋯⋯` | 2022/6/27 12:06:37 | 經查，原始訊息確實為詐騙網站。此遭檢舉之使用者僅有針對此主題互動，替詐騙網站背書，應為詐騙之同夥。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 （若有新內容樣態類似，將會隨時增補於上表）
 
