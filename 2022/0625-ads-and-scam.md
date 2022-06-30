@@ -12,7 +12,7 @@
 | [不平凡人](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=VFNTo4EBZ4FY5vnAOXPC) | 查核回應<br>`沒有問題，目前虛擬貨幣電子錢包在世界各地都有不同的交易所⋯⋯` | 2022/6/27 12:06:37 | 經查，原始訊息確實為詐騙網站。此遭檢舉之使用者僅有針對此主題互動，替詐騙網站背書，應為詐騙之同夥。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Tran Hieu Lan Huynh](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=jlP7r4EBZ4FY5vnAZIGL) | 網友補充<br>`我就是和我老公在網站相遇相識相知，然後見面了，現在老公很⋯⋯` | 2022/6/29 23:06:54 | 經查，原始訊息確實為交友詐騙網站。此遭檢舉之使用者僅有發表這一篇網友補充，替詐騙網站背書，應為詐騙之同夥。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [dinh quy le](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=kVP_r4EBZ4FY5vnAxIFk) | 網友補充<br>`蠻不錯的一個交友平台的哦，很多朋友在準邊成功牽手。祝大家⋯⋯` | 2022/6/29 23:16:19 | 經查，原始訊息確實為交友詐騙網站。此遭檢舉之使用者僅有發表這一篇網友補充，替詐騙網站背書，應為詐騙之同夥。 | 隱藏所有被檢舉人發表之內容 [^block] |
-
+| [趙哲緯](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=LVOatIEBZ4FY5vnAY4bd) | 網友補充<br>`我是6月1日被詐騙集團騙走248萬的，我和她是在交友軟體⋯⋯` | 2022/6/30 20:40:14 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 （若有新內容樣態類似，將會隨時增補於上表）
 
