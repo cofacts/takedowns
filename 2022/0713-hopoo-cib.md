@@ -24,6 +24,8 @@
 | [☞開朗的富里達蓮娜☜](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=j4S8C_0IscaIGvGXawHR9qBJzVZJsAwZU1nLFIZYOlndthuDM) | 網友補充<br>`HOPOO交易所擁有超級防衛SSL連接，離線比特幣錢包技⋯⋯` | 2022/7/13 10:37:44 | Cofacts WG 觀察此 LINE 使用者在 Cofacts 上送出的補充資訊、送出時間與主題相近，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [☞開朗的富里達蓮娜☜](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=j4S8C_0IscaIGvGXawHR9qBJzVZJsAwZU1nLFIZYOlndthuDM) | 網友補充<br>`hopoo科技緊抓數字時代機遇，積極爲內存塊鏈、金融科技⋯⋯` | 2022/7/13 10:42:16 | Cofacts WG 觀察此 LINE 使用者在 Cofacts 上送出的補充資訊、送出時間與主題相近，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [☞開朗的富里達蓮娜☜](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=j4S8C_0IscaIGvGXawHR9qBJzVZJsAwZU1nLFIZYOlndthuDM) | 網友補充<br>`hopoo科技把握時代契機，不斷深化業務多元化戰略，積極⋯⋯` | 2022/7/13 10:50:54 | Cofacts WG 觀察此 LINE 使用者在 Cofacts 上送出的補充資訊、送出時間與主題相近，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Karim Ramirez](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=DVOx9oEBZ4FY5vnA-MvI) | 查核回應<br>`在全球資本爭相布局內存塊鏈的趨勢下，加密貨幣儼然成為新興⋯⋯` | 2022/7/13 16:40:21 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Karim Ramirez](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=DVOx9oEBZ4FY5vnA-MvI) | 網友補充<br>`加密貨幣儼然成為新興大類資產中的寵兒，不斷吸引著資金入場⋯⋯` | 2022/7/13 16:41:25 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 [^block]: 
     經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
