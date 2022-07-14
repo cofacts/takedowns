@@ -16,6 +16,7 @@
 | [Stamz BGranj](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=gFOSvIEBZ4FY5vnAIY6h) | 網友補充<br>`請勿相信任何的港股投資，交友網站，賴群組投資，殺豬盤，投⋯⋯` | 2022/7/2 09:42:03 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [吳銘昌](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=VlPDTYEBZ4FY5vnAihpG) | 網友補充<br>`我之前也有被騙，簡單來說，就是一開始的小額投資都有賺，後⋯⋯` | 2022/7/4 11:10:49 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [YU Fan](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=CsJmEHwBucwAqrbagcF-) | 查核回應<br>`遇到被騙之後不要著急也不要慌，更不要一個人做決定，我被騙⋯⋯` | 2021/9/26 11:39:13 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [楊澤鵬](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=71O_-oEBZ4FY5vnAB891) | 網友補充<br>`現在的詐騙集團手法層出不窮，讓人防不勝防，虛擬幣、黃金、⋯⋯` | 2022/7/14 11:30:31 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 
 （若有新內容樣態類似，將會隨時增補於上表）
