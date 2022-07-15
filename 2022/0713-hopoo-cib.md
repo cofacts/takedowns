@@ -46,6 +46,7 @@
 | [Shin Hayes](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=qVNB-4EBZ4FY5vnA2NAe) | 網友補充<br>`交易所總部位於新加坡，其覈心團隊成員來自全球各個國家，均⋯⋯` | 2022/7/14 14:08:17 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [韩巧莲](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=dlPq44EBZ4FY5vnANrdT) | 網友補充<br>`團隊中老師很有經驗，跟著老師思路，准盈利。 我深有體會，⋯⋯` | 2022/7/10 01:03:52 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Gilreath Gaines](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=jFPK_4EBZ4FY5vnAqNUI) | 網友補充<br>`hopoo科技重視合規化，積極於全球主要市場申請多項虛擬⋯⋯` | 2022/7/15 11:01:01 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Karsten Taylor](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=klNL_YEBZ4FY5vnAxNMj) | 查核回應<br>`中国是政策市，外资流入容易流出难，中国能源现在有俄罗斯与⋯⋯` | 2022/7/15 13:05:01 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊、使用名字與送出時間，認定此為與詐騙集團攜同性造假活動呼應的洗版者。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 
 [^block]: 
