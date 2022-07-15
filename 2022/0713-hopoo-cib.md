@@ -44,6 +44,9 @@
 | [Shin Hayes](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=qVNB-4EBZ4FY5vnA2NAe) | 查核回應<br>`交易所總部位於新加坡，其覈心團隊成員來自全球各個國家，均⋯⋯` | 2022/7/14 14:07:04 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Shin Hayes](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=qVNB-4EBZ4FY5vnA2NAe) | 網友補充<br>`交易所總部位於新加坡，其覈心團隊成員來自全球各個國家，均⋯⋯` | 2022/7/14 14:07:25 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Shin Hayes](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=qVNB-4EBZ4FY5vnA2NAe) | 網友補充<br>`交易所總部位於新加坡，其覈心團隊成員來自全球各個國家，均⋯⋯` | 2022/7/14 14:08:17 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [韩巧莲](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=dlPq44EBZ4FY5vnANrdT) | 網友補充<br>`團隊中老師很有經驗，跟著老師思路，准盈利。 我深有體會，⋯⋯` | 2022/7/10 01:03:52 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Gilreath Gaines](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=jFPK_4EBZ4FY5vnAqNUI) | 網友補充<br>`hopoo科技重視合規化，積極於全球主要市場申請多項虛擬⋯⋯` | 2022/7/15 11:01:01 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+
 
 [^block]: 
     經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
