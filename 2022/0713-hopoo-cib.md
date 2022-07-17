@@ -48,6 +48,12 @@
 | [Gilreath Gaines](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=jFPK_4EBZ4FY5vnAqNUI) | 網友補充<br>`hopoo科技重視合規化，積極於全球主要市場申請多項虛擬⋯⋯` | 2022/7/15 11:01:01 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Karsten Taylor](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=klNL_YEBZ4FY5vnAxNMj) | 查核回應<br>`中国是政策市，外资流入容易流出难，中国能源现在有俄罗斯与⋯⋯` | 2022/7/15 13:05:01 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊、使用名字與送出時間，認定此為與詐騙集團攜同性造假活動呼應的洗版者。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Talukdar Herring](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=s1OYAIIBZ4FY5vnALdaI) | 查核回應<br>`HOPOO交易所經久的科技積澱，為您提供了高效便捷的實时⋯⋯` | 2022/7/15 14:51:50 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Kittle Walter](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=AFPTAIIBZ4FY5vnAltec) | 查核回應<br>`加密貨幣，正規合法。 可以安全使用。 我們也提出了“應用⋯⋯` | 2022/7/15 16:16:32 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Kittle Walter](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=AFPTAIIBZ4FY5vnAltec) | 查核回應<br>`加密貨幣，正規合法。 可以安全使用。 我們也提出了“應用⋯⋯` | 2022/7/15 16:17:01 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Tremayne Owen](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=M1P9AIIBZ4FY5vnAB9ea) | 查核回應<br>`萬方家族辦公室主要聚焦亞洲超高淨值人士的投資需求，在提供⋯⋯` | 2022/7/15 17:05:15 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Tremayne Owen](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=M1P9AIIBZ4FY5vnAB9ea) | 查核回應<br>`萬方家族辦公室主要聚焦亞洲超高淨值人士的投資需求，在提供⋯⋯` | 2022/7/15 17:05:54 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [先生小](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=VlPohYEBZ4FY5vnAFlWD) | 查核回應<br>`是真的，有查證，你們這些其他比賽者的粉絲就不要出來詆毀了⋯⋯` | 2022/7/15 21:02:27 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [陳小姐](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=lFPyAYIBZ4FY5vnAX9jO) | 網友補充<br>`我現在已經在Hopoo上操作了，每天都有獲利，真心感謝張⋯⋯` | 2022/7/15 21:06:41 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 
 [^block]: 
