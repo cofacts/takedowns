@@ -64,6 +64,10 @@
 | [Spiteri Shepard](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=O1PtFYIBZ4FY5vnAPe6z) | 查核回應<br>`據悉，hopoo平台是亞洲首個以虛擬資産爲核心的聯合家族⋯⋯` | 2022/7/19 18:09:13 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Elkins Sykes](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=QFPwFYIBZ4FY5vnA-O5G) | 網友補充<br>`當前數字經濟漸成大勢，hopoo科技把握時代契機，不斷深⋯⋯` | 2022/7/19 18:12:31 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Elkins Sykes](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=QFPwFYIBZ4FY5vnA-O5G) | 查核回應<br>`當前數字經濟漸成大勢，hopoo科技把握時代契機，不斷深⋯⋯` | 2022/7/19 18:12:53 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Daan Stephens](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=FVPOGYIBZ4FY5vnAefNR) | 網友補充<br>`Hopoo也正在積極拓展與多個國家的深度合作關系，在行業⋯⋯` | 2022/7/20 12:15:06 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Daan Stephens](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=FVPOGYIBZ4FY5vnAefNR) | 查核回應<br>`Hopoo也正在積極拓展與多個國家的深度合作關系，在行業⋯⋯` | 2022/7/20 12:15:13 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Keli Snyder](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=N1PWGYIBZ4FY5vnAkvMU) | 查核回應<br>`後疫情時代，內存塊鏈、雲計算等前沿科技加速落地，推動全球⋯⋯` | 2022/7/20 12:22:40 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Mintz Barrera](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=VlPeGYIBZ4FY5vnAF_PR) | 查核回應<br>`作爲行業領先的策略交易系統+期權競猜-元宇宙NFT的全生⋯⋯` | 2022/7/20 12:31:23 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 
 [^block]: 
