@@ -20,6 +20,8 @@
 | [金融服務](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=SlPYBIIBZ4FY5vnAutuU) | 網友補充<br>`我是5月被詐騙集團騙走189萬，對方一開始讓我掉進愛情陷⋯⋯` | 2022/7/16 10:37:36 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [naga huha](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=3VO8FYIBZ4FY5vnAn-0O) | 查核回應<br>`play on our online poker sit⋯⋯` | 2022/7/19 17:17:18 | 此帳號僅有張貼過遊戲廣告內容，應為廣告帳號。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [邱佳林](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=-VPFFYIBZ4FY5vnAU-1h) | 網友補充<br>`我是被黃金期貨詐騙的，我是上網無意間看得到有人寫文說那個⋯⋯` | 2022/7/19 17:27:02 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [劉先生](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=3lQtOIIBZ4FY5vnAghUC) | 網友補充<br>`我之前也有被騙，簡單來說，就是一開始的小額投資都有賺，後⋯⋯` | 2022/7/26 09:45:54 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Mon Aug 08 2022 00:00:00 GMT+0800 (台北標準時間)](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=RVTgOoIBZ4FY5vnA-BkO) | 網友補充<br>`我是6月17在福景投顧會員群?被騙港股投資，股票大殺 ，⋯⋯` | 2022/7/26 22:25:14 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 
 （若有新內容樣態類似，將會隨時增補於上表）
