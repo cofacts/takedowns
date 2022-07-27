@@ -23,6 +23,7 @@
 | [劉先生](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=3lQtOIIBZ4FY5vnAghUC) | 網友補充<br>`我之前也有被騙，簡單來說，就是一開始的小額投資都有賺，後⋯⋯` | 2022/7/26 09:45:54 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [8 8](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=RVTgOoIBZ4FY5vnA-BkO) | 網友補充<br>`我是6月17在福景投顧會員群?被騙港股投資，股票大殺 ，⋯⋯` | 2022/7/26 22:25:14 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [鄭竹成](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=41Pw14EBZ4FY5vnAs6oT) | 網友補充<br>`我之前也有被騙，簡單來說，就是一開始的小額投資都有賺，後⋯⋯` | 2022/7/26 22:35:14 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [4 4](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=SFTiOoIBZ4FY5vnAHBlB) | 查核回應<br>`您已受邀加入“投資被騙的資金怎麼拿回分享”。请访问以下链⋯⋯` | 2022/7/27 15:21:06 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 
 （若有新內容樣態類似，將會隨時增補於上表）
