@@ -30,6 +30,7 @@
 | [Alonso Spenser](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=5FSWQoIBZ4FY5vnA9iCu) | 查核回應<br>`您已受邀加入“投資被騙的資金怎麼拿回分享”。请访问以下链⋯⋯` | 2022/7/28 10:16:21 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [宇澤](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=6VRDRYIBZ4FY5vnAciTp) | 網友補充<br>`現在MT4，MT5，虛擬貨幣殺豬盤超多，大多都是通過一些⋯⋯` | 2022/7/28 22:44:19 | 此帳號到處張貼廣告內文吸引人加入特定 LINE ID 進行二次詐騙。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Finger Celeste](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=k1SdXYIBZ4FY5vnA6T-V) | 網友補充<br>`呂尚傑老師代表臺灣選手參加歐洲金融杯，同時呂尚傑老師通過⋯⋯` | 2022/8/2 18:43:07 | 網傳訊息與以往之金融比賽詐騙相符，確實為詐騙集團。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Judkins Payne](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=3VTuXoIBZ4FY5vnAjUFK) | 查核回應<br>`今年第十四屆歐洲金融杯面向全球投資者，將緊盯國內外頂尖金⋯⋯` | 2022/8/2 23:00:47 | 網傳訊息與以往之金融比賽詐騙相符，確實為詐騙集團。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 
 （若有新內容樣態類似，將會隨時增補於上表）
