@@ -8,6 +8,9 @@
 | [Gavi Ovill](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=HVTzbIIBZ4FY5vnAg1Of) | 網友補充<br>`助勃增硬壯陽藥：http://www.hunkman99⋯⋯` | 2022/8/5 15:42:13 | 此帳號在多篇訊息下張貼壯陽藥廣告，是為廣告帳號。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [rivas devyn](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=qVS7bIIBZ4FY5vnAHFIk) | 查核回應<br>`後疫情時期對全球經濟的影響，依然在蔓延。 全球的經濟急速⋯⋯` | 2022/8/5 15:51:51 | 遭檢舉之回應在回應出處散佈金融比賽詐騙廣告。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [roderick daryl](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=aFQPbYIBZ4FY5vnA-lMv) | 網友補充<br>`呂尚傑老師的團隊希望將頂級的投資科技和最前沿的財經資訊免⋯⋯` | 2022/8/5 16:20:18 | 網傳訊息與以往之金融比賽詐騙相符，確實為詐騙集團。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [roberta uzziel](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=z1Q_bYIBZ4FY5vnA2VOs) | 查核回應<br>`呂尚傑希望通過自身多年的實戰經驗免費向市場投資者傳播最專⋯⋯` | 2022/8/5 17:44:54 | 網傳訊息與以往之金融比賽詐騙相符，確實為詐騙集團。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [orv marj](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=NFR5bYIBZ4FY5vnAUFQ5) | 查核回應<br>`智慧醫療體系充分運用“互聯網+”的概念，充分考慮醫患體系⋯⋯` | 2022/8/5 18:13:21 | 網傳訊息與以往之金融比賽詐騙相符，確實為詐騙集團。 | 隱藏所有被檢舉人發表之內容 [^block] |
+
 
 [^block]: 
     經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
