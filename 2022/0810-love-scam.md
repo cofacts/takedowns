@@ -15,7 +15,11 @@
 | [小飛飛](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=kFTxfYIBZ4FY5vnAcmzE) | 查核回應<br>`我剛約到哈哈哈` | 2022/8/8 22:53:26 | 此使用者與其他使用者均在 2022/8/8 晚間 11 時集中針對此訊息發表回應，在網站上並無其他互動。同時，此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [橘子](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=plT2fYIBZ4FY5vnA-WyP) | 查核回應<br>`確實挺費錢的，但是我感覺值得，因為我跟那個女生相處半年多⋯⋯` | 2022/8/8 23:00:25 | 此使用者與其他使用者均在 2022/8/8 晚間 11 時集中針對此訊息發表回應，在網站上並無其他互動。同時，此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [thái việt lưu](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=mFT0fYIBZ4FY5vnAoGw1) | 查核回應<br>`確實挺費錢的，但是我感覺值得，因為我跟那個女生相處半年多⋯⋯` | 2022/8/8 23:08:24 | 此使用者與其他使用者均在 2022/8/8 晚間 11 時集中針對此訊息發表回應，在網站上並無其他互動。同時，此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Sat Jan 01 2022 00:00:00 GMT+0800 (台北標準時間)](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=aVS7hYIBZ4FY5vnABnnB) | 查核回應<br>`為什麼我只用了500就約到一夜情 你們沒有約到會不會自己⋯⋯` | 2022/8/10 11:13:30 | 此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [cory inesita](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=VFS3hoIBZ4FY5vnArXtK) | 查核回應<br>`能約到是真的 但是價格真的不菲 剛開始以為被騙了 不過還⋯⋯` | 2022/8/10 15:49:59 | 此使用者與其他使用者均在 2022/8/10 下午 4 時集中針對此訊息發表回應，在網站上並無其他互動。同時，此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [dennis nancee](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=dVTKhoIBZ4FY5vnAO3um) | 查核回應<br>`私密交友很安全 我已婚在這邊約了很多次` | 2022/8/10 16:07:27 | 此使用者與其他使用者均在 2022/8/10 下午 4 時集中針對此訊息發表回應，在網站上並無其他互動。同時，此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
+(同型態之檢舉亦會陸續公布於此)
 
 [^block]: 
     經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
