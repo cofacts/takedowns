@@ -18,6 +18,8 @@
 | [1 1](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=aVS7hYIBZ4FY5vnABnnB) | 查核回應<br>`為什麼我只用了500就約到一夜情 你們沒有約到會不會自己⋯⋯` | 2022/8/10 11:13:30 | 此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [cory inesita](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=VFS3hoIBZ4FY5vnArXtK) | 查核回應<br>`能約到是真的 但是價格真的不菲 剛開始以為被騙了 不過還⋯⋯` | 2022/8/10 15:49:59 | 此使用者與其他使用者均在 2022/8/10 下午 4 時集中針對此訊息發表回應，在網站上並無其他互動。同時，此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [dennis nancee](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=dVTKhoIBZ4FY5vnAO3um) | 查核回應<br>`私密交友很安全 我已婚在這邊約了很多次` | 2022/8/10 16:07:27 | 此使用者與其他使用者均在 2022/8/10 下午 4 時集中針對此訊息發表回應，在網站上並無其他互動。同時，此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [台中第一帥](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=ZVTVh4IBZ4FY5vnAo32k) | 查核回應<br>`真的能約到 就是看你願意堅持嗎，還好我約的女生對我不離不棄` | 2022/8/10 21:06:42 | 此訊息並無 LINE 熱度；原訊息網址 2022 年 6 月註冊，網站簡陋，應是交友詐騙網站。因此，Cofacts WG 判定此為詐騙集團之協同互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+
 
 (同型態之檢舉亦會陸續公布於此)
 
