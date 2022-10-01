@@ -11,6 +11,9 @@
 | [xiumei chen](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=rFPzBYIBZ4FY5vnAjtxH) | 網友補充<br>`不是詐騙啊 我跟男友見面已經決定結婚了 花錢是真的 但是⋯⋯` | 2022/7/16 15:48:52 | Cofacts WG 觀察此 LINE 使用者在 Cofacts 上送出的補充資訊、送出時間與主題相近，認定此為交友詐騙的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [蔡碧霞](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=wlMCBoIBZ4FY5vnAvdxm) | 網友補充<br>`這個不是詐騙吧 蠻好的軟體啊 客戶人員回復很及時 裡面也⋯⋯` | 2022/7/16 16:04:13 | Cofacts WG 觀察此 LINE 使用者在 Cofacts 上送出的補充資訊、送出時間與主題相近，認定此為交友詐騙的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [潘桂秀](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=y1MJBoIBZ4FY5vnARtwA) | 網友補充<br>`去年八月通過同事介紹下載詿冊使用的，很好的軟體，沒有其他⋯⋯` | 2022/7/16 16:08:20 | Cofacts WG 觀察此 LINE 使用者在 Cofacts 上送出的補充資訊、送出時間與主題相近，認定此為交友詐騙的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [tian ban](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=94pyDIMBv5it-Cx_Z4zq) | 網友補充<br>`那些說騙人的都是自己亂操作賠錢了在網路上詆毀污衊別人的三小` | 2022/9/5 15:03:05 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Gfc Gh](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=IYqiDIMBv5it-Cx_H413) | 網友補充<br>`感覺澤陽老師還好吧，這麼有實力，不可能是詐騙，感覺詆毀他⋯⋯` | 2022/9/5 15:53:28 | Cofacts WG 觀察此網站使用者在 Cofacts 上送出的補充資訊與送出時間，認定此為詐騙集團的協同性造假互動。 | 隱藏所有被檢舉人發表之內容 [^block] |
+
 
 [^block]: 
     經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
