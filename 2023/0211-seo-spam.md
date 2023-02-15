@@ -26,7 +26,7 @@ https://g0v.hackmd.io/JPUb9EMATwGLBhgeECAskA#%E6%9C%AC%E9%80%B1%E9%81%95%E8%A6%8
 此二使用者輸入大量資訊，均非 LINE 上的轉傳訊息，應是藉 Cofacts 真的假的網站獲取流量與搜尋引擎之索引，屬廣告行為，不應存在於 Cofacts 真的假的系統之中。
 
 惟[《Cofacts 真的假的 聊天機器人使用者條款
-》](https://github.com/cofacts/rumors-line-bot/blob/master/LEGAL.md)並未針對 LINE 使用者的廣告行為進行規範，故於 2023/2/11 諮詢協作者社群意見（[Facebook](https://www.facebook.com/groups/cofacts/posts/3503763443188793)、[Slack](https://g0v-slack-archive.g0v.ronny.tw/index/channel/C2PPMRQGP/2023-02#ts-1676099658.869559)），並於同年月 14 日。
+》](https://github.com/cofacts/rumors-line-bot/blob/master/LEGAL.md)並未針對 LINE 使用者的廣告行為進行規範，故於 2023/2/11 諮詢協作者社群意見（[Facebook](https://www.facebook.com/groups/cofacts/posts/3503763443188793)、[Slack](https://g0v-slack-archive.g0v.ronny.tw/index/channel/C2PPMRQGP/2023-02#ts-1676099658.869559)），並於同年月 14 日搜集社群意見，並無異議者。
 
 ## 處置
 
