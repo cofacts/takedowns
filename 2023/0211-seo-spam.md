@@ -11,10 +11,10 @@ https://g0v.hackmd.io/JPUb9EMATwGLBhgeECAskA#%E6%9C%AC%E9%80%B1%E9%81%95%E8%A6%8
 然而，此類訊息送進 Cofacts 真的假的之後，鮮有使用者二次查詢。
 
 後續[會議記錄](https://g0v.hackmd.io/G8JKqoW6T-SpCa704awGsw#CIB-%E8%99%95%E7%90%86)有提出更多疑點。此公告關注之 LINE 使用者與其發表內容如下：
-- 乂活潑的六甲葛列格乂：https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_LO8hbMHXx2JJGkLhlrJFIE3eilJW0mu2SGJScX1D1cE
+- 乂活潑的六甲葛列格乂：https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_LO8hbMHXx2JJGkLhlrJFIE3eilJW0mu2SGJScX1D1cE&showAll=1
     - 將內容發表於多個部落格之後，再送進 Cofacts 真的假的。
     - 2022/10/10 開始活躍，均為輸入詐騙相關部落格文章。訊息大多僅有一人查詢。
-- 有雄心壯志的車城柏格：https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_PM1BJIZ1acF-VZZPmA9Zm8AZUZC7Va2k1uN5p8CK23k
+- 有雄心壯志的車城柏格：https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_PM1BJIZ1acF-VZZPmA9Zm8AZUZC7Va2k1uN5p8CK23k&showAll=1
     - 部落格發表日期與進入 Cofacts 系統之日期相同，應是發表後即來送出。
     - 多篇下分留言處會有詐騙集團張貼 LINE ID 進行二次詐騙。
     - 2022/8/10 開始活躍，均為輸入詐騙相關部落格文章。訊息大多僅有一人查詢。
