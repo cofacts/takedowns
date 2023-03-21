@@ -26,21 +26,4 @@ Cofacts WG 進行了以下比對：
 經以上比對分析，Cofacts WG 發表於 2022年 10 月 24 日的查核回應，雖可用於過往案例 [^scam]，但確實無相關證據能使用於  https://cofacts.tw/article/36jungsrmt4wk 之下，故將該查核回應標記為刪除，以維申訴人之利益。
 
 [^scam]: 
-  Cofacts WG 在 Cofacts 真的假的資料庫中曾有見過類似案例，諸如：
-  LIBF 挑戰系列
-  - https://cofacts.tw/article/hxciafy5exe3
-  - https://cofacts.tw/article/9vsgpq0rc51r
-  - https://cofacts.tw/article/225j78w0z449z
-  - https://cofacts.tw/article/3recweq3zygg6
-  - https://cofacts.tw/article/33wqrhq2jvbhu
-
-  金融杯系列
-  - https://cofacts.tw/article/yzu5s92k1w6e
-  - https://cofacts.tw/article/3qqfhtd0e90af
-  - https://cofacts.tw/article/2eh7t4sz9vtfn
-
-  其他
-  - https://cofacts.tw/article/2oatyjfqi3tzt
-  - https://cofacts.tw/article/2pmjoqg73bh3b
-  - https://cofacts.tw/article/ab1ezymy89ru
-  - https://cofacts.tw/article/mjanqrmyjto4
+    Cofacts WG 在 Cofacts 真的假的資料庫中曾有見過類似案例，諸如[LIBF 挑戰](https://cofacts.tw/article/hxciafy5exe3)、[金融杯](https://cofacts.tw/article/yzu5s92k1w6e)或[其](https://cofacts.tw/article/2oatyjfqi3tzt)[他](https://cofacts.tw/article/2pmjoqg73bh3b)老師之樣態
