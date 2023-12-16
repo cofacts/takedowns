@@ -24,6 +24,8 @@
 | [Pinkie Wakenight](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=S_ZMcIwBAjOeMOklIJsC) | 查核回應<br>`經查驗：黌達投顧不是詐騙。 黌達投顧高效運作是黌達投顧有⋯⋯` | 2023/12/16 09:45:38 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Kilioni Button](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=ePZncIwBAjOeMOkl-Zta) | 查核回應<br>`黌達投顧是真的，黌達投顧老師經過連續兩日與國安基金專業團⋯⋯` | 2023/12/16 10:15:52 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Michaela Steinhour](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=3fakcIwBAjOeMOklf5vr) | 查核回應<br>`黌達投顧投資都將竭盡所能滿足客戶的需求,讓客戶感到舒心和⋯⋯` | 2023/12/16 11:22:10 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Klay Altamirano](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=L_Y8cIwBAjOeMOkl0Ztx) | 查核回應<br>`經查驗：黌達投顧不是詐騙。 黌達投顧高效運作是鴻典投資有⋯⋯` | 2023/12/16 09:30:54 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
+
 
 [^block]: 
     經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
