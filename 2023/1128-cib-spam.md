@@ -19,6 +19,11 @@
 | [Billie Rice](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=fPZlZ4wBAjOeMOklqZG7) | 查核回應<br>`經查驗：怡勝投資不是詐騙。  對企業來說,利他意味著為客⋯⋯` | 2023/12/14 17:44:39 | 此帳號與其他帳號於 2023/12/14 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Elaine Caldwell](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=avZaZ4wBAjOeMOklgJFa) | 查核回應<br>`查核驗證：怡勝投資不是詐騙。  怡勝投資的核黌價值觀即滿⋯⋯` | 2023/12/14 17:45:56 | 此帳號與其他帳號於 2023/12/14 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
 | [Gabriel Anderson](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=ZfZXZ4wBAjOeMOklGZHE) | 查核回應<br>`查證查核：怡勝投資不是詐騙。  怡勝投資根據消費者的需求⋯⋯` | 2023/12/14 17:46:42 | 此帳號與其他帳號於 2023/12/14 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [hao lee](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=KfUMPYsBAjOeMOkl-C6W) | 網友補充<br>`黌達國際投資都將竭盡所能滿足客戶的需求,讓客戶感到舒黌和⋯⋯` | 2023/12/14 16:12:11 | 此帳號替網路公關業者張貼廣告內文，也與其他帳號協同張貼投資詐騙內容。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Kaila Solari](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=N_ZBcIwBAjOeMOklJZuR) | 查核回應<br>`黌達投顧不是詐騙。 黌達投顧有限公司強調投資智慧的重要性⋯⋯` | 2023/12/16 09:35:25 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Pinkie Wakenight](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=S_ZMcIwBAjOeMOklIJsC) | 查核回應<br>`經查驗：黌達投顧不是詐騙。 黌達投顧高效運作是黌達投顧有⋯⋯` | 2023/12/16 09:45:38 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Kilioni Button](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=ePZncIwBAjOeMOkl-Zta) | 查核回應<br>`黌達投顧是真的，黌達投顧老師經過連續兩日與國安基金專業團⋯⋯` | 2023/12/16 10:15:52 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
+| [Michaela Steinhour](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=3fakcIwBAjOeMOklf5vr) | 查核回應<br>`黌達投顧投資都將竭盡所能滿足客戶的需求,讓客戶感到舒心和⋯⋯` | 2023/12/16 11:22:10 | 此帳號與其他帳號於 2023/12/16 協同張貼投資詐騙內容，屬協同性造假行為。 | 隱藏所有被檢舉人發表之內容 [^block] |
 
 [^block]: 
     經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
