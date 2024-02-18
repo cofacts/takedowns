@@ -20,7 +20,7 @@ Cofacts WG 翻找聯絡用之 Email，發現收件匣中的確有一封 2023 年
 
 2023/11/4 信件中有較可用於判斷之資訊，故以下內容以 2023/11/4 信件為準。
 
-1. 信件寄件人 Email 同 https://arielhsu.tw/about-me/ 所揭示之合作邀約信先，故來信者確實為 arielhsu.tw 網站之編輯者。
+1. 信件寄件人 Email 同 https://arielhsu.tw/about-me/ 所揭示之合作邀約信箱，故來信者確實為 arielhsu.tw 網站之編輯者。
 2. 信件中提及之出處 https://arielhsu.tw/daniel-han-quotes/ 內容確實與 https://cofacts.tw/article/1z2aqy4l8hsy9 內容重複性極高，即使是下標、標點也都相同。
 3. Cofacts 訊息 https://cofacts.tw/article/1z2aqy4l8hsy9 是 2023/8/23 由 LINE 使用者回報進 Cofacts 資料庫。
 4. 根據 [Wayback Machine 存檔](https://web.archive.org/web/20221206151833/https://arielhsu.tw/daniel-han-quotes/)，該文內容的前 72 條在 2022/12/6 以前就已經存在於 arielhsu.tw 網站上，時間點比 Cofacts 所收錄之時間還早。另，根據 [Wayback Machine 2021/2/17](https://web.archive.org/web/20210217112759/https://arielhsu.tw/daniel-han-quotes/) 之存檔，該文的前 48 條，在 2020/12/1 就已經發表。
