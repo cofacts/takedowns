@@ -2,7 +2,7 @@
 
 Cofacts 工作小組（Cofacts WG）收到來訊，指出自己與朋友之對話被送進 Cofacts 資料庫，希望移除。
 
-Cofacts WG 向來訊者來回確認後，確認應是 https://cofacts.tw/article/AACAf3__f4D-f_8__wAwAAAA__8AAP_-f-5f9A9wAAA 這篇訊息。 
+Cofacts WG 與來訊者對話，確認其是指 https://cofacts.tw/article/AACAf3__f4D-f_8__wAwAAAA__8AAP_-f-5f9A9wAAA 這篇訊息。 
 
 ## 判斷
 
