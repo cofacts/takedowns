@@ -10,4 +10,4 @@ Cofacts 工作小組（Cofacts WG）收到來信，Cofacts 工作小組收到來
 
 ## 處置
 
-Cofacts WG 應來信要求，要求移除上述圖片與文字，與 AI 自動分析。
+Cofacts WG 應來信要求，要求移除上述圖片與文字。
