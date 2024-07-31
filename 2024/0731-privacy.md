@@ -11,3 +11,10 @@ Cofacts 工作小組收到來信，指出自己不慎將含有個資的圖片訊
 
 ## 處置
 Cofacts WG 移除網傳訊息中的私人資訊，但保留與詐騙集團之文件內容。
+
+<details>
+  <summary>遮除後影像</summary>
+  
+  ![20240731-uXJGB5EBd3gcY0LpuKiV 1](https://github.com/user-attachments/assets/3a605cd5-6ce6-481a-b976-042ec85535a3)
+  
+</details>
