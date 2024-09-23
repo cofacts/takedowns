@@ -1,6 +1,6 @@
 # 2024/09/24 移除隱私資訊
 
-Cofacts 工作小組收到來自 maicoin.com 來信，指出以下訊息含有其客戶之個資圖片，希望協助去識別化相關敏感資訊：
+Cofacts 工作小組收到來自 maicoin.com 來信，指出以下訊息含有其客戶之個資圖片，希望 Cofacts 協助去識別化相關敏感資訊：
 - https://cofacts.tw/article/i3I_v5ABd3gcY0LpFz3X
 - https://cofacts.tw/article/EXJ4P5EBd3gcY0LpIP_V
 
