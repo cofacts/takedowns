@@ -1,7 +1,7 @@
 # 2024/09/26 移除隱私資訊
 
 林瓊嘉律師事務所循[《Cofacts 真的假的 網站使用者條款》第六段之聯絡方式](https://github.com/cofacts/rumors-site/blob/master/LEGAL.md#%E5%85%AD%E8%81%AF%E7%B5%A1%E6%96%B9%E5%BC%8F)
-向 Cofacts 真的假的工作小組（Cofacts WG）表示其受當事人家屬委託，希望撤下以下醫療隱私之文章：
+向 Cofacts 真的假的工作小組（Cofacts WG）表示，其受當事人家屬委託，希望撤下以下醫療隱私之文章：
 - https://cofacts.tw/article/3ongit4wpvt9s
 
 ## 分析
