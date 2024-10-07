@@ -1,4 +1,4 @@
-# 2024/10/05 移除隱私資訊
+# 2024/10/07 移除隱私資訊
 
 Cofacts 工作小組信箱收到來信指出其不慎將含有個人資訊的訊息 https://cofacts.tw/article/F7b0YZIBDfH0hhhZmt5N 傳入資料庫，希望移除。
 
