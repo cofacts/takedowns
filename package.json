@@ -25,6 +25,6 @@
   "scripts": {
     "lint": "eslint src/.",
     "lint:fix": "eslint --fix src/.",
-    "takedown": "node src/takedown.js",
+    "takedown": "node src/takedown.js"
   }
 }
