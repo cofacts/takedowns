@@ -85,7 +85,7 @@ export async function getSpamList(replies) {
     ];
 
     const result = await model.generateContent(prompt);
-    // console.log('generateContent:', result.response.text());
+    console.log('generateContent:', result.response.text());
     const resultText = JSON.parse(result.response.text());
 
     // console.log(resultText);
