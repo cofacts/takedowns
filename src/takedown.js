@@ -1,6 +1,7 @@
 import { getRepliesInBatch, getUserReplies } from './util/graphql.js';
 import { getSpamList } from './getSpamList.js';
 import { createPullRequest } from './createPR.js';
+import subTime from 'date-fns/sub';
 
 const knownUsers = new Set();
 
@@ -57,15 +58,14 @@ async function getSpamRepliesFromDate(date) {
   }
 }
 
-function getDateBeforeDays(days) {
-  const date = new Date();
-  date.setDate(date.getDate() - days);
-  date.setHours(6, 0, 0, 0);
+function getDateBefore(timeOffset) {
+  const date = subTime(new Date(), timeOffset);
   return date;
 }
 
 async function main() {
-  await getSpamRepliesFromDate(getDateBeforeDays(20));
+  const timeOffset = JSON.parse(process.env.REVIEW_REPLY_BEFORE) || {};
+  await getSpamRepliesFromDate(getDateBefore(timeOffset));
 }
 
 main();
