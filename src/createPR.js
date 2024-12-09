@@ -2,17 +2,20 @@ import 'dotenv/config';
 import { Octokit } from '@octokit/rest';
 import { createAppAuth } from '@octokit/auth-app';
 
+// set up target repo and branch
 const owner = 'cofacts';
-const repo = 'takedown';
+const repo = 'takedowns';
 const prTargetBranch = 'master';
 
 async function getGithubApp() {
-  const appId = process.env.APP_ID;
+  const appId = process.env.GITHUB_APP_ID;
+
+  // for easier to read from env, we base64 encode the private key
   const privateKey = Buffer.from(
-    process.env.PRIVATE_KEY_BASE64,
+    process.env.GITHUB_APP_PRIVATE_KEY_BASE64,
     'base64'
   ).toString('utf-8');
-  const installationId = process.env.INSTALLATION_ID;
+  const installationId = process.env.GITHUB_APP_INSTALLATION_ID;
 
   const octokit = new Octokit({
     authStrategy: createAppAuth,
