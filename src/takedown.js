@@ -1,9 +1,22 @@
 import { getRepliesInBatch, getUserReplies } from './util/graphql.js';
 import { getSpamList } from './getSpamList.js';
-import { createPullRequest } from './createPR.js';
+import { getAllPRs, createPullRequest } from './createPR.js';
 import subTime from 'date-fns/sub';
 
 const knownUsers = new Set();
+
+async function initKnownUsers() {
+  const list = await getAllPRs();
+  list.forEach((pr) => {
+    // get userid from lastWord of pr title
+    const title = pr.title;
+    if (title.startsWith('Takedown spam user')) {
+      const userid = pr.title.slice(pr.title.lastIndexOf(' ') + 1);
+      // console.log('userid: ', userid);
+      if (!knownUsers.has(userid)) knownUsers.add(userid);
+    }
+  });
+}
 
 async function getSpamRepliesFromDate(date) {
   try {
@@ -64,6 +77,7 @@ function getDateBefore(timeOffset) {
 }
 
 async function main() {
+  await initKnownUsers();
   const timeOffset = JSON.parse(process.env.REVIEW_REPLY_BEFORE) || {};
   await getSpamRepliesFromDate(getDateBefore(timeOffset));
 }

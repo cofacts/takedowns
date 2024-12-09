@@ -7,7 +7,9 @@ const owner = 'cofacts';
 const repo = 'takedowns';
 const prTargetBranch = 'master';
 
+let cachedOctokit;
 async function getGithubApp() {
+  if (cachedOctokit) return cachedOctokit;
   const appId = process.env.GITHUB_APP_ID;
 
   // for easier to read from env, we base64 encode the private key
@@ -25,7 +27,7 @@ async function getGithubApp() {
       installationId,
     },
   });
-
+  cachedOctokit = octokit;
   return octokit;
 }
 
@@ -84,7 +86,7 @@ export async function createPullRequest({
         timeZone: 'Asia/Taipei',
       }).format(new Date(createdAt));
 
-      // |發佈時間|回應內容|文章ID|
+      // |發佈時間|回應內容|
       return `| ${contentDate} | ${trimmedContent} |`;
     });
 
@@ -115,7 +117,7 @@ ${tableRows.join('\n')}
 `;
 
     // PR title and description
-    const prTitle = 'Takedown spam';
+    const prTitle = `Takedown spam user ${userName} ${userId}`;
     const prDescription = `This PR was created by Takedown Bot
 
 Takedown command:
@@ -166,6 +168,36 @@ docker-compose exec api node build/scripts/blockUser.js --userId=${userId} --blo
     return prData;
   } catch (error) {
     console.error('Error creating PR:', error);
+    throw error;
+  }
+}
+
+export async function getAllPRs() {
+  try {
+    let allPRs = [];
+    let page = 1;
+    const octokit = await getGithubApp();
+    let hasPRs = false;
+    do {
+      const { data: prs } = await octokit.pulls.list({
+        owner,
+        repo,
+        state: 'all', // include open and closed PR
+        per_page: 100, // get 100 pr per page
+        page: page,
+      });
+
+      hasPRs = prs.length > 0;
+
+      if (hasPRs) {
+        allPRs = [...allPRs, ...prs];
+        page++;
+      }
+    } while (hasPRs);
+
+    return allPRs;
+  } catch (error) {
+    console.error('Error fetching PRs:', error);
     throw error;
   }
 }
