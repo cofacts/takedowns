@@ -5,6 +5,15 @@ import {
   HarmCategory,
   SchemaType,
 } from '@google/generative-ai';
+import { Langfuse } from 'langfuse';
+
+const langfuse = new Langfuse({
+  secretKey: process.env.LANGFUSE_SECRET_KEY,
+  publicKey: process.env.LANGFUSE_PUBLIC_KEY,
+  baseUrl: process.env.LANGFUSE_BASEURL,
+  requestTimeout: 10000,
+  enabled: true, // set to false to disable sending events
+});
 
 const gModel = 'gemini-1.5-flash';
 const systemInstruction = [
@@ -62,6 +71,12 @@ const model = genAI.getGenerativeModel({
   ],
 });
 
+const trace = langfuse.trace({
+  name: 'Gemini spam detection',
+  userId: 'takedown-bot',
+  tags: [process.env.ENV || 'development'],
+});
+
 export async function getSpamList(replies) {
   const spamList = [];
 
@@ -84,14 +99,41 @@ export async function getSpamList(replies) {
       `請分類以下訊息:${node.text}`,
     ];
 
+    const startTime = Date.now();
     const result = await model.generateContent(prompt);
-    // console.log('generateContent:', result.response.text());
-    const resultText = JSON.parse(result.response.text());
+    const endTime = Date.now();
+    const latency = endTime - startTime;
 
-    // console.log(resultText);
+    const output = result.response.text();
+    await trace.generation({
+      name: 'Gemini spam detection Response',
+      model: gModel,
+      modelParameters: {
+        systemInstruction,
+      },
+      input: prompt,
+      output: result.response.text(),
+      startTime: new Date(startTime),
+      endTime: new Date(endTime),
+      metadata: {
+        latency,
+      },
+      usage: {
+        input: result.response.usageMetadata.promptTokenCount,
+        output: result.response.usageMetadata.candidatesTokenCount,
+        total: result.response.usageMetadata.totalTokenCount,
+      },
+    });
 
-    if (resultText.isSpam) {
-      spamList.push({ ...node, reason: resultText.reason });
+    // console.log('generatedContent:', output);
+    try {
+      const outputJSON = JSON.parse(output);
+
+      if (outputJSON.isSpam) {
+        spamList.push({ ...node, reason: outputJSON.reason });
+      }
+    } catch (error) {
+      console.error('Error parsing JSON:', output);
     }
   });
   await Promise.all(promises);
