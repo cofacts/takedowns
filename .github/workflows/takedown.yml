@@ -1,0 +1,28 @@
+name: Spam Detection
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # run every ten minutes
+  workflow_dispatch:      # allow manual trigger
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - run: npm i
+
+      - name: Create takedown PR
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_APP_PRIVATE_KEY_BASE64: ${{ secrets.GITHUB_APP_PRIVATE_KEY_BASE64 }}
+          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
+          GITHUB_APP_INSTALLATION_ID: ${{ secrets.GITHUB_APP_INSTALLATION_ID }}
+          COFACTS_URL: ${{ env.COFACTS_URL }}
+          COFACTS_API_URL: ${{ env.COFACTS_API_URL }}
+          REVIEW_REPLY_BEFORE: ${{ env.REVIEW_REPLY_BEFORE }}
+        run: npm run takedown
