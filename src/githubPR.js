@@ -10,14 +10,14 @@ const prTargetBranch = 'master';
 let cachedOctokit;
 async function getGithubApp() {
   if (cachedOctokit) return cachedOctokit;
-  const appId = process.env.GITHUB_APP_ID;
+  const appId = process.env.GITHUBAPP_ID;
 
   // for easier to read from env, we base64 encode the private key
   const privateKey = Buffer.from(
-    process.env.GITHUB_APP_PRIVATE_KEY_BASE64,
+    process.env.GITHUBAPP_PRIVATE_KEY_BASE64,
     'base64'
   ).toString('utf-8');
-  const installationId = process.env.GITHUB_APP_INSTALLATION_ID;
+  const installationId = process.env.GITHUBAPP_INSTALLATION_ID;
 
   const octokit = new Octokit({
     authStrategy: createAppAuth,

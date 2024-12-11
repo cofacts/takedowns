@@ -20,9 +20,9 @@ jobs:
       - name: Create takedown PR
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GITHUB_APP_PRIVATE_KEY_BASE64: ${{ secrets.GITHUB_APP_PRIVATE_KEY_BASE64 }}
-          GITHUB_APP_ID: ${{ secrets.GITHUB_APP_ID }}
-          GITHUB_APP_INSTALLATION_ID: ${{ secrets.GITHUB_APP_INSTALLATION_ID }}
+          GITHUBAPP_PRIVATE_KEY_BASE64: ${{ secrets.GITHUBAPP_PRIVATE_KEY_BASE64 }}
+          GITHUBAPP_ID: ${{ secrets.GITHUBAPP_ID }}
+          GITHUBAPP_INSTALLATION_ID: ${{ secrets.GITHUBAPP_INSTALLATION_ID }}
           COFACTS_URL: ${{ env.COFACTS_URL }}
           COFACTS_API_URL: ${{ env.COFACTS_API_URL }}
           REVIEW_REPLY_BEFORE: ${{ env.REVIEW_REPLY_BEFORE }}
