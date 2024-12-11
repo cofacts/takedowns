@@ -121,8 +121,9 @@ ${tableRows.join('\n')}
     const prDescription = `This PR was created by Takedown Bot
 
 Takedown command:
+Visit https://admin-api.cofacts.tw/moderation
 \`\`\`
-docker-compose exec api node build/scripts/blockUser.js --userId=${userId} --blockedReason=https://github.com/cofacts/takedowns/blob/master/${fileName}
+{"userId":"${userId}", "blockedReason":"https://github.com/cofacts/takedowns/blob/master/${fileName}"}
 \`\`\`
 `;
 
