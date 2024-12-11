@@ -1,6 +1,6 @@
 import { getRepliesInBatch, getUserReplies } from './util/graphql.js';
 import { getSpamList } from './getSpamList.js';
-import { getAllPRs, createPullRequest } from './createPR.js';
+import { getAllPRs, createPullRequest } from './githubPR.js';
 import subTime from 'date-fns/sub';
 
 const knownUsers = new Set();
