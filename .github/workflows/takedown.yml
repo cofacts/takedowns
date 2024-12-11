@@ -6,7 +6,7 @@ on:
   workflow_dispatch:      # allow manual trigger
 
 jobs:
-  create-pr:
+  scanning-spam:
     environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,7 @@ jobs:
           cache: 'npm'
       - run: npm i
 
-      - name: Create takedown PR
+      - name: Detect and create takedown PR
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUBAPP_PRIVATE_KEY_BASE64: ${{ secrets.GITHUBAPP_PRIVATE_KEY_BASE64 }}
