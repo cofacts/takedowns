@@ -70,6 +70,7 @@ export async function* getRepliesInBatch(from, to) {
               node {
                 id
                 text
+                status
                 createdAt
                 user {
                   id
@@ -84,7 +85,9 @@ export async function* getRepliesInBatch(from, to) {
       { from, to, after }
     );
 
-    yield ListReplies.edges.map(({ node }) => node);
+    yield ListReplies.edges
+      .filter(({ node }) => node.status !== 'BLOCKED')
+      .map(({ node }) => node);
 
     // next graphql call should go after the last cursor of this page
     after = ListReplies.edges[ListReplies.edges.length - 1].cursor;
