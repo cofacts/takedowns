@@ -42,10 +42,8 @@ export async function* getRepliesInBatch(from, to) {
           orderBy: { createdAt: DESC }
         ) {
           pageInfo {
-            firstCursor
             lastCursor
           }
-          totalCount
         }
       }
     `,
