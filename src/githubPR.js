@@ -180,10 +180,10 @@ export async function getAllPRs() {
     const octokit = await getGithubApp();
     let hasPRs = false;
     do {
-      const { data: prs } = await octokit.pulls.list({
-        owner,
-        repo,
-        state: 'all', // include open and closed PR
+      const {
+        data: { items: prs },
+      } = await octokit.rest.search.issuesAndPullRequests({
+        q: `repo:${owner}/${repo} is:pr in:title "Takedown spam user"`,
         per_page: 100, // get 100 pr per page
         page: page,
       });
