@@ -156,31 +156,27 @@ export async function getSpamList(replies) {
   const promises = replies.map(async (node) => {
     const prompt = [`請分析:${node.text}`];
 
-    const startTime = Date.now();
-    const chatResult = await chat.sendMessage(prompt);
-    const endTime = Date.now();
-    const latency = endTime - startTime;
-    const output = chatResult.response.text();
-
-    await trace.generation({
+    const langfuseGeneration = trace.generation({
       name: 'Gemini spam detection Response',
       model: modelName,
       modelParameters: {
-        systemPrompt,
-        fewShotExamples,
+        systemPrompt: systemPrompt.map((i) => JSON.stringify(i)),
+        fewShotExamples: fewShotExamples.map((i) => JSON.stringify(i)),
         temperature,
       },
       input: prompt,
+    });
+
+    const chatResult = await chat.sendMessage(prompt);
+    const output = chatResult.response.text();
+
+    langfuseGeneration.end({
       output: chatResult.response.text(),
-      startTime: new Date(startTime),
-      endTime: new Date(endTime),
-      metadata: {
-        latency,
-      },
       usage: {
         input: chatResult.response.usageMetadata.promptTokenCount,
         output: chatResult.response.usageMetadata.candidatesTokenCount,
         total: chatResult.response.usageMetadata.totalTokenCount,
+        unit: 'CHARACTERS',
       },
     });
 
@@ -196,6 +192,6 @@ export async function getSpamList(replies) {
     }
   });
   await Promise.all(promises);
-
+  await langfuse.flushAsync();
   return spamList;
 }
