@@ -18,7 +18,7 @@ async function initKnownUsers() {
   });
 }
 
-async function getSpamRepliesFromDate(date) {
+async function processSpamRepliesFromDate(date) {
   try {
     let allSpamReplies = [];
 
@@ -78,8 +78,9 @@ function getDateBefore(timeOffset) {
 
 async function main() {
   await initKnownUsers();
+  // { "seconds":4, "minutes":3, "hours":2, "days":1 }
   const timeOffset = JSON.parse(process.env.REVIEW_REPLY_BEFORE) || {};
-  await getSpamRepliesFromDate(getDateBefore(timeOffset));
+  await processSpamRepliesFromDate(getDateBefore(timeOffset));
 }
 
 main().catch((err) => {
