@@ -82,4 +82,16 @@ async function main() {
   await getSpamRepliesFromDate(getDateBefore(timeOffset));
 }
 
-main();
+main().catch((err) => {
+  console.error('Main function error:', err);
+  process.exit(1);
+});
+
+process.on('unhandledRejection', (err) => {
+  console.error('Unhandled Rejection:', err);
+});
+
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  process.exit(1);
+});
