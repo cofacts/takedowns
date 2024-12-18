@@ -4,6 +4,7 @@ import { getAllPRs, createPullRequest } from './githubPR.js';
 import subTime from 'date-fns/sub';
 
 const knownUsers = new Set();
+const seenTexts = new Set();
 
 async function initKnownUsers() {
   const list = await getAllPRs();
@@ -27,10 +28,14 @@ async function processSpamRepliesFromDate(date) {
       date.toISOString(),
       new Date().toISOString()
     )) {
-      // filter out known users
-      const filteredReplies = replies.filter(
-        (reply) => !knownUsers.has(reply.user.id)
-      );
+      // filter out known users and duplicate texts
+      const filteredReplies = replies.filter((reply) => {
+        if (!knownUsers.has(reply.user.id) && !seenTexts.has(reply.text)) {
+          seenTexts.add(reply.text);
+          return true;
+        }
+        return false;
+      });
 
       const list = await getSpamList(filteredReplies);
 
