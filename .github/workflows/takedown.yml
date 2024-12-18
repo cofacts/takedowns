@@ -2,7 +2,7 @@ name: Spam Detection
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # run every ten minutes
+    - cron: '4-59/10 * * * *'  # run every ten minutes, starting at 4 minutes past the hour
   workflow_dispatch:      # allow manual trigger
 
 jobs:
