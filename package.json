@@ -1,0 +1,32 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.11",
+    "@google/generative-ai": "^0.21.0",
+    "@octokit/auth-app": "^7.1.2",
+    "@octokit/rest": "^21.0.2",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "langfuse": "^3.30.2",
+    "prettier": "^2.8.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "lint": "eslint src/.",
+    "lint:fix": "eslint --fix src/.",
+    "takedown": "node src/takedown.js"
+  }
+}
