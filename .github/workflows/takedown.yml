@@ -10,6 +10,14 @@ jobs:
     environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
     runs-on: ubuntu-latest
     steps:
+      - name: Setup environment variable
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/master" ]; then
+            echo "CURRENT_ENV=production" >> $GITHUB_ENV
+          else
+            echo "CURRENT_ENV=staging" >> $GITHUB_ENV
+          fi
+
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -29,5 +37,5 @@ jobs:
           LANGFUSE_BASEURL: ${{ vars.LANGFUSE_BASEURL }}
           LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
           LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
-          ENV: ${{ github.environment }}
+          ENV: ${{ env.CURRENT_ENV }}
         run: npm run takedown
