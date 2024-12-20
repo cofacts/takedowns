@@ -67,7 +67,7 @@ async function processSpamRepliesFromDate(date) {
           id,
           userId: user.id,
           userName: user.name,
-          spam_content: text,
+          spamContent: text,
           createdAt,
           userReplyHistory,
         });
