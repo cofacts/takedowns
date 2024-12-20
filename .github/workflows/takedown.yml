@@ -25,7 +25,7 @@ jobs:
           GITHUBAPP_INSTALLATION_ID: ${{ secrets.GITHUBAPP_INSTALLATION_ID }}
           COFACTS_URL: ${{ vars.COFACTS_URL }}
           COFACTS_API_URL: ${{ vars.COFACTS_API_URL }}
-          REVIEW_REPLY_BEFORE: ${{ vars.REVIEW_REPLY_BEFORE }}
+          LAST_SCANNED_AT: ${{ vars.LAST_SCANNED_AT }}
           LANGFUSE_BASEURL: ${{ vars.LANGFUSE_BASEURL }}
           LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
           LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}

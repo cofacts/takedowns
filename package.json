@@ -10,7 +10,6 @@
     "@octokit/auth-app": "^7.1.2",
     "@octokit/rest": "^21.0.2",
     "babel-plugin-module-resolver": "^4.0.0",
-    "date-fns": "^4.1.0",
     "dotenv": "^16.4.5",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",

@@ -202,3 +202,15 @@ export async function getAllPRs() {
     throw error;
   }
 }
+
+// https://octokit.github.io/rest.js/v21/#actions-update-environment-variable
+export async function updateEnvironmentVariable(env, varName, value) {
+  const octokit = await getGithubApp();
+  await octokit.rest.actions.updateEnvironmentVariable({
+    owner,
+    repo,
+    environment_name: env,
+    name: varName,
+    value,
+  });
+}
