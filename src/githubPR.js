@@ -41,7 +41,7 @@ export async function createPullRequest({
   id,
   userId,
   userName,
-  spam_content,
+  spamContent,
   createdAt,
   userReplyHistory,
 }) {
@@ -59,7 +59,7 @@ export async function createPullRequest({
     const spammerNameWithLinkToTheirWork = `[${userName}](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=${userId})`;
     const trimmedContent = `[查核回應](${
       process.env.COFACTS_URL
-    }/reply/${id})<br>\`${ellipsis(spam_content, 300)}\``;
+    }/reply/${id})<br>\`${ellipsis(spamContent, 300)}\``;
     const contentDate = Intl.DateTimeFormat('zh-TW', {
       year: 'numeric',
       month: 'numeric',
@@ -201,4 +201,16 @@ export async function getAllPRs() {
     console.error('Error fetching PRs:', error);
     throw error;
   }
+}
+
+// https://octokit.github.io/rest.js/v21/#actions-update-environment-variable
+export async function updateEnvironmentVariable(env, varName, value) {
+  const octokit = await getGithubApp();
+  await octokit.rest.actions.updateEnvironmentVariable({
+    owner,
+    repo,
+    environment_name: env,
+    name: varName,
+    value,
+  });
 }

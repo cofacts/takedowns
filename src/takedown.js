@@ -1,7 +1,10 @@
 import { getRepliesInBatch, getUserReplies } from './util/graphql.js';
 import { getSpamList } from './getSpamList.js';
-import { getAllPRs, createPullRequest } from './githubPR.js';
-import subTime from 'date-fns/sub';
+import {
+  getAllPRs,
+  createPullRequest,
+  updateEnvironmentVariable,
+} from './githubPR.js';
 
 const knownUsers = new Set();
 const seenTexts = new Set();
@@ -64,7 +67,7 @@ async function processSpamRepliesFromDate(date) {
           id,
           userId: user.id,
           userName: user.name,
-          spam_content: text,
+          spamContent: text,
           createdAt,
           userReplyHistory,
         });
@@ -76,16 +79,17 @@ async function processSpamRepliesFromDate(date) {
   }
 }
 
-function getDateBefore(timeOffset) {
-  const date = subTime(new Date(), timeOffset);
-  return date;
-}
-
 async function main() {
   await initKnownUsers();
-  // { "seconds":4, "minutes":3, "hours":2, "days":1 }
-  const timeOffset = JSON.parse(process.env.REVIEW_REPLY_BEFORE) || {};
-  await processSpamRepliesFromDate(getDateBefore(timeOffset));
+
+  const lastScannedAt = new Date(process.env.LAST_SCANNED_AT);
+  // write last scanned time to github environment variable
+  await updateEnvironmentVariable(
+    process.env.ENV,
+    'LAST_SCANNED_AT',
+    new Date().toISOString()
+  );
+  await processSpamRepliesFromDate(lastScannedAt);
 }
 
 main().catch((err) => {
