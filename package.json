@@ -19,7 +19,8 @@
     "eslint-plugin-prettier": "^3.1.0",
     "langfuse": "^3.30.2",
     "openai": "^4.77.3",
-    "prettier": "^2.8.6"
+    "prettier": "^2.8.6",
+    "zod": "^3.24.1"
   },
   "engines": {
     "node": ">=18.0.0"
