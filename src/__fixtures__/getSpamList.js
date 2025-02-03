@@ -1,19 +1,19 @@
 export const normalReply1 = {
-  id: 'AIjnZZMBpiYdBld__1zb',
+  id: 'normalReply1',
   text: '此為正確訊息，圖片為新北市環保局臉書粉絲專頁的宣導圖片。\n新北市環保局網站也有發布相關訊息',
   createdAt: '2024-11-26T00:38:43.407Z',
   user: { id: '_4hnV5MBpiYdBld_flt5', name: 'belong112' },
 };
 
 export const normalReply2 = {
-  id: '_oiz9ZIBpiYdBld_dlsJ',
+  id: 'normalReply2',
   text: '假的，這是假抽獎的詐騙。\n刑事局提醒，常見中獎詐騙手法，包括網路刊登廣告或福利活動，吸引被害者參與抽獎，並提供多項高額好禮，讓被害者選擇心儀獎品，並要求先支付代購費以及提供寄送資訊。匯款後詐騙集團會傳抽獎連結，並通知中獎。接續沒有任何現金入被害人帳戶；詐騙集團以代付失敗為由，提供假冒的LINE@專員的聯繫方式，要求加LINE協助核實原因，假專員並提供假的網站供登錄。被害人匯款後，無法聯繫上對方，亦未收到中獎款項或寄送禮品。',
   createdAt: '2024-11-04T05:43:52.063Z',
   user: { id: 'AVqVwjqQyrDaTqlmmp_a', name: 'MrOrz' },
 };
 
 export const normalReply3 = {
-  id: 'Sbc51JIBDfH0hhhZUagL',
+  id: 'normalReply3',
   text:
     '1. 此訊息高機率為「求職詐騙」！小心慘遭被當人頭帳戶而變成洗錢詐欺幫助犯上社會新聞！或是帳戶被搬空還負債累累！詳細判斷詐騙集團的手法如下。\n' +
     '2. 聲稱來自「台灣的合法公司」，然而打電話給該公司會發現沒有在徵人，或該公司就是詐騙集團新成立的子公司。\n' +
@@ -27,35 +27,35 @@ export const normalReply3 = {
 };
 
 export const normalReply4 = {
-  id: 'J7cU1pIBDfH0hhhZZ6rN',
+  id: 'normalReply4',
   text: '也提醒任何個人或公司行號使用他人圖像標誌時，均應標明出處或申請使用權才可以使用哦。⋯⋯訊息與謠言查證無關。',
   createdAt: '2024-10-29T02:21:54.509Z',
   user: { id: '9bejzJIBDfH0hhhZupmT', name: '咪哞' },
 };
 
 export const normalReply5 = {
-  id: 'p7fc1ZIBDfH0hhhZbKnr',
+  id: 'normalReply5',
   text: '假的，聲稱「瓜分烏克蘭」並非事實，根據烏克蘭《關於國有和公共財產私有化》法第4條規定，國有企業和能源、礦產、地下資源等，以及供水、燃氣、供暖、廢水排放等基礎設施，為確保國家履行基本職能、確保國家防禦能力，並保障人民權益，都不能轉讓給私人資本。烏克蘭政府2023年5月9日宣布與美國資產管理公司貝萊德簽約，委託貝萊德協助啟動烏克蘭發展基金，物色投資者並提供諮詢建議，但是與國有的資產直接給了貝萊德無關。',
   createdAt: '2024-10-29T01:20:45.803Z',
   user: { id: 'AVriAlOoyrDaTqlmmqhC', name: 'Lin' },
 };
 
 export const normalReply6 = {
-  id: '74g24ZIBpiYdBld_a1uO',
+  id: 'normalReply6',
   text: '測試 20241031 strict schema + URL resolution',
   createdAt: '2024-10-31T06:14:53.057Z',
   user: { id: 'AVqVwjqQyrDaTqlmmp_a', name: 'MrOrz' },
 };
 
 export const normalReply7 = {
-  id: 'E7fk05IBDfH0hhhZjah1',
+  id: 'normalReply7',
   text: '此文含有錯誤訊息，可參考以下資料佐證：https://www.mygopen.com/2024/10/DCS.html?m=1',
   createdAt: '2024-10-28T16:10:23.988Z',
   user: { id: '9bejzJIBDfH0hhhZupmT', name: '咪哞' },
 };
 
 export const normalReply8 = {
-  id: 'GreE0pIBDfH0hhhZ8KS_',
+  id: 'normalReply8',
   text: '已證實是詐騙 正確官網網址後面試gov 而非cc',
   createdAt: '2024-10-28T09:46:20.734Z',
   user: { id: 'E7eD0pIBDfH0hhhZ9aSW', name: 'Red Voldo' },
@@ -103,7 +103,7 @@ export const normalReply13 = {
 };
 
 export const spamReply1 = {
-  id: 'Qbcd1pIBDfH0hhhZ3aq9',
+  id: 'spamReply1',
   text:
     '被騙免費追回賴《jy5886》VistA Coin是詐騙嗎？被VistA Coin投資詐騙怎麼辦？VistA Coin投資詐騙！VistA Coin詐騙！爆料：VistA Coin是詐騙嗎？被VistA Coin投資詐騙怎麼辦？VistA Coin投資詐騙！VistA Coin詐騙！已經有多名網友被詐騙，已經被165通報就是詐騙平台，現在已經有很多網友上當受騙！以「高收益」、「有漏洞」「輕鬆賺」、「投報率高」、「簡單好操作」吸引眼球後實施詐騙，只要聲稱高收益穩賺不賠一定有問題，天沒有免費的午餐，投資需理智！請大家一定要小心！！！\n' +
     '\n' +
@@ -178,14 +178,14 @@ export const spamReply1 = {
 };
 
 export const spamReply2 = {
-  id: 'xre105IBDfH0hhhZ5afa',
+  id: 'spamReply2',
   text: '高雄定點茶+賴gg883691 高雄定點 高雄市區定點 高雄市苓雅區定點 #高雄市新興區定點 高雄市林園區定點 高雄市仁武區定點 #高雄市大寮區定點 #高雄市前金區定點 高雄市鹽埕區定點 #高雄市左營區定點 #高雄市楠梓區定點 #高雄市鼓山區定點 高雄市三民區定點 高雄市前鎮區定點 #高雄市鳳山區定點 #高雄市岡山區定點 高雄市橋頭區定點 高雄市大社區定點 高雄市小港區定點 高雄市85大樓定點 台灣叫小姐 台灣外送茶,外約優質服務/台妹外約/ 魚訊/火車站叫小姐 /約妹/茶訊/定點/找妹/個工/ 台灣外約妹妹/飯店/酒店/旅館/賓館/旅社/文旅/商旅/汽車旅館叫小姐 金門/澎湖叫小姐#論壇#套房個工,#個人工作室 #定點魚訊',
   createdAt: '2024-10-28T15:19:26.425Z',
   user: { id: 'O3Ol2pEBd3gcY0LpOuxN', name: 'DSHKYT YHK' },
 };
 
 export const spamReply3 = {
-  id: 'urew05IBDfH0hhhZGqdB',
+  id: 'spamReply3',
   text:
     '受害者被騙免費挽回賴：【w33994】億銈詐騙 億銈安全合法嗎是真的嗎有人知道嗎 億銈是詐騙嗎 億銈無法出金 被億銈詐騙的錢還可以拿回來嗎【億銈】！目前已有近百名被害人在廖律師的幫助下免費拿回被億銈被騙的資產 億銈投資股份有限公司\n' +
     '詐騙集團在網路上構建投資詐騙黑平台，大肆宣傳「高收益」、「有漏洞」、「輕鬆賺」、「投資回報率高」、「簡單好操作」等，誘導民眾進行投資，事實是這些都是詐騙集團的陷阱，目的就是為了引誘你大量入金，後續再以各種理由讓你被迫繼續繳錢。望大家擦亮雙眼避免詐騙 \n' +
