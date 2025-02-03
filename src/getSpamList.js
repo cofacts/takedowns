@@ -1,9 +1,8 @@
 import 'dotenv/config';
 import OpenAI from 'openai';
-import { observeOpenAI } from 'langfuse';
 import { zodResponseFormat } from 'openai/helpers/zod';
 import { z } from 'zod';
-import { Langfuse } from 'langfuse';
+import { Langfuse, observeOpenAI } from 'langfuse';
 
 const langfuse = new Langfuse({
   secretKey: process.env.LANGFUSE_SECRET_KEY,
