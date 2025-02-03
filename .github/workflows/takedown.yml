@@ -27,7 +27,7 @@ jobs:
 
       - name: Detect and create takedown PR
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GITHUBAPP_PRIVATE_KEY_BASE64: ${{ secrets.GITHUBAPP_PRIVATE_KEY_BASE64 }}
           GITHUBAPP_ID: ${{ secrets.GITHUBAPP_ID }}
           GITHUBAPP_INSTALLATION_ID: ${{ secrets.GITHUBAPP_INSTALLATION_ID }}
