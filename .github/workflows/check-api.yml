@@ -62,31 +62,24 @@ jobs:
             const openApiUrl = `${process.env.COFACTS_ADMIN_API_URL}/openapi.json`;
             console.log(`Fetching OpenAPI spec from: ${openApiUrl}`);
 
-            // We can assume OpenAPI spec can always be parsed. please help simplify logic here, AI!
-            let response;
+            let openApiSpec;
             try {
-              response = await fetch(openApiUrl, {
+              const response = await fetch(openApiUrl, {
                 method: 'GET',
                 headers: {
                   'CF-Access-Client-Id': process.env.COFACTS_ADMIN_CLIENT_ID,
                   'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET
                 }
               });
+              
               if (!response.ok) {
                 throw new Error(`Failed to fetch OpenAPI spec: ${response.status} ${response.statusText}`);
               }
-            } catch (error) {
-              console.error('Error fetching OpenAPI spec:', error);
-              core.setFailed(`Error fetching OpenAPI spec: ${error.message}`);
-              return;
-            }
-
-            let openApiSpec;
-            try {
+              
               openApiSpec = await response.json();
             } catch (error) {
-              console.error('Error parsing OpenAPI spec:', error);
-              core.setFailed(`Error parsing OpenAPI spec: ${error.message}`);
+              console.error('Error fetching or parsing OpenAPI spec:', error);
+              core.setFailed(`Error with OpenAPI spec: ${error.message}`);
               return;
             }
 
