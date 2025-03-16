@@ -37,11 +37,10 @@ jobs:
             }
             const apiBody = apiBodyMatch[1].trim();
 
-            console.log(`Extracted API endpoint: ${apiEndpoint}`);
-            console.log(`Extracted API body: ${apiBody}`);
-
             // Construct full URL
             const apiUrl = `${process.env.COFACTS_ADMIN_API_URL}${apiEndpoint}`;
+            console.log(`Extracted API endpoint: ${apiUrl}`);
+            console.log(`Extracted API body: ${apiBody}`);
 
             try {
               // Make API call
