@@ -101,29 +101,23 @@ jobs:
 
             // Validate request body using openapi-request-validator
             if (operation.requestBody) {
-              try {
-                const validator = new OpenAPIRequestValidator({
-                  requestBody: operation.requestBody
-                });
+              const validator = new OpenAPIRequestValidator({
+                requestBody: operation.requestBody
+              });
 
-                const request = {
-                  body: apiBody,
-                  headers: {
-                    'content-type': 'application/json'
-                  }
-                };
-
-                const errors = validator.validateRequest(request);
-
-                if (errors) {
-                  console.error('Request body validation failed:');
-                  console.error(JSON.stringify(errors, null, 2));
-                  core.setFailed(`Request body validation failed: ${JSON.stringify(errors)}`);
-                  return;
+              const request = {
+                body: apiBody,
+                headers: {
+                  'content-type': 'application/json'
                 }
-              } catch (error) {
-                console.error('Error during request validation:', error);
-                core.setFailed(`Error during request validation: ${error.message}`);
+              };
+
+              const errors = validator.validateRequest(request);
+
+              if (errors) {
+                console.error('Request body validation failed:');
+                console.error(JSON.stringify(errors, null, 2));
+                core.setFailed(`Request body validation failed: ${JSON.stringify(errors)}`);
                 return;
               }
             }
