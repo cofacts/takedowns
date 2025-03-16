@@ -11,17 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Extract API info
         id: api-info
         uses: ./.github/actions/extract-api-info
         with:
           pr-description: ${{ github.event.pull_request.body }}
-      
+
       # Skip the rest of the workflow if no API info was found
       - name: Skip if no API info
         if: steps.api-info.outputs.has-api-info != 'true'
         run: echo "No API information found in PR description. Skipping API call."
-      
+
       - name: Execute API call
         if: steps.api-info.outputs.has-api-info == 'true'
         uses: actions/github-script@v7
@@ -35,12 +38,12 @@ jobs:
           script: |
             const apiEndpoint = process.env.API_ENDPOINT;
             const apiBody = process.env.API_BODY;
-            
+
             // Construct full URL
             const apiUrl = `${process.env.COFACTS_ADMIN_API_URL}${apiEndpoint}`;
             console.log(`Executing API call to: ${apiUrl}`);
             console.log(`With request body: ${apiBody}`);
-            
+
             try {
               // Make API call
               const response = await fetch(apiUrl, {
