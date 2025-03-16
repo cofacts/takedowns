@@ -59,6 +59,7 @@ jobs:
             console.log(`With request body: ${JSON.stringify(apiBody)}`);
 
             // Fetch OpenAPI spec
+            // this try-catch is too big. remove this, AI!
             try {
               const openApiUrl = `${process.env.COFACTS_ADMIN_API_URL}/openapi.json`;
               console.log(`Fetching OpenAPI spec from: ${openApiUrl}`);
