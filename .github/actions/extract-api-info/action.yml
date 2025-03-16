@@ -20,12 +20,11 @@ runs:
     - name: Extract API info
       id: extract
       uses: actions/github-script@v7
+      env:
+        PR_DESCRIPTION: ${{ inputs.pr-description }}
       with:
-        # There is no inputs in github-script. use env instead, AI!
-        inputs:
-          prDescription: ${{ inputs.pr-description }}
         script: |
-          const prDescription = inputs.prDescription || '';
+          const prDescription = process.env.PR_DESCRIPTION || '';
 
           // Extract API endpoint
           const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
