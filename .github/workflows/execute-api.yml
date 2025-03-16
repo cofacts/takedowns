@@ -1,0 +1,92 @@
+name: Execute Admin API Calls
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  execute-api:
+    # Only run when PR is merged (not just closed)
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
+    steps:
+      - name: Setup environment variable
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/master" ]; then
+            echo "CURRENT_ENV=production" >> $GITHUB_ENV
+          else
+            echo "CURRENT_ENV=staging" >> $GITHUB_ENV
+          fi
+
+      - name: Extract API info and execute API call
+        uses: actions/github-script@v7
+        env:
+          COFACTS_ADMIN_API_URL: ${{ vars.COFACTS_ADMIN_API_URL }}
+          COFACTS_ADMIN_CLIENT_ID: ${{ secrets.COFACTS_ADMIN_CLIENT_ID }}
+          COFACTS_ADMIN_CLIENT_SECRET: ${{ secrets.COFACTS_ADMIN_CLIENT_SECRET }}
+        with:
+          script: |
+            const prDescription = context.payload.pull_request.body;
+
+            // Extract API endpoint
+            const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
+            if (!apiEndpointMatch) {
+              console.log('No API endpoint found in PR description');
+              return;
+            }
+            const apiEndpoint = apiEndpointMatch[1];
+
+            // Extract API body
+            const apiBodyMatch = prDescription.match(/- Body:\s+```json\s+([\s\S]+?)\s+```/);
+            if (!apiBodyMatch) {
+              console.log('No API body found in PR description');
+              return;
+            }
+            const apiBody = apiBodyMatch[1].trim();
+
+            console.log(`Extracted API endpoint: ${apiEndpoint}`);
+            console.log(`Extracted API body: ${apiBody}`);
+
+            // Construct full URL
+            const apiUrl = `${process.env.COFACTS_ADMIN_API_URL}${apiEndpoint}`;
+
+            try {
+              // Make API call
+              const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'CF-Access-Client-Id': process.env.COFACTS_ADMIN_CLIENT_ID,
+                  'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET
+                },
+                body: apiBody
+              });
+
+              const responseData = await response.json();
+
+              // Check if response is successful
+              if (!response.ok) {
+                throw new Error(`API call failed with status ${response.status}: ${JSON.stringify(responseData)}`);
+              }
+
+              // Comment on PR with API response
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: `✅ API call executed successfully!\n\n**Response:**\n\`\`\`json\n${JSON.stringify(responseData, null, 2)}\n\`\`\``
+              });
+
+              console.log('API call successful and PR comment added');
+            } catch (error) {
+              console.error('Error executing API call:', error);
+
+              // Comment on PR with error
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: `❌ API call failed!\n\n**Error:**\n\`\`\`\n${error.message}\n\`\`\``
+              });
+            }
