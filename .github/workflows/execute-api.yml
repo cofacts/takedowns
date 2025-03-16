@@ -11,14 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
     steps:
-      - name: Setup environment variable
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/master" ]; then
-            echo "CURRENT_ENV=production" >> $GITHUB_ENV
-          else
-            echo "CURRENT_ENV=staging" >> $GITHUB_ENV
-          fi
-
       - name: Extract API info and execute API call
         uses: actions/github-script@v7
         env:
