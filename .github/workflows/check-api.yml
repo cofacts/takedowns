@@ -24,6 +24,8 @@ jobs:
         uses: actions/github-script@v7
         env:
           COFACTS_ADMIN_API_URL: ${{ vars.COFACTS_ADMIN_API_URL }}
+          COFACTS_ADMIN_CLIENT_ID: ${{ vars.COFACTS_ADMIN_CLIENT_ID }}
+          COFACTS_ADMIN_CLIENT_SECRET: ${{ secrets.COFACTS_ADMIN_CLIENT_SECRET }}
         with:
           script: |
             const OpenAPIRequestValidator = require('openapi-request-validator').default;
@@ -61,7 +63,12 @@ jobs:
               const openApiUrl = `${process.env.COFACTS_ADMIN_API_URL}/openapi.json`;
               console.log(`Fetching OpenAPI spec from: ${openApiUrl}`);
               
-              const response = await fetch(openApiUrl);
+              const response = await fetch(openApiUrl, {
+                headers: {
+                  'CF-Access-Client-Id': process.env.COFACTS_ADMIN_CLIENT_ID,
+                  'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET
+                }
+              });
               if (!response.ok) {
                 throw new Error(`Failed to fetch OpenAPI spec: ${response.status} ${response.statusText}`);
               }
