@@ -1,0 +1,119 @@
+name: Validate API Call Against OpenAPI Spec
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  validate-api:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install openapi-request-validator
+        run: npm install openapi-request-validator
+        
+      - name: Validate API against OpenAPI spec
+        uses: actions/github-script@v7
+        env:
+          COFACTS_ADMIN_API_URL: ${{ vars.COFACTS_ADMIN_API_URL }}
+        with:
+          script: |
+            const OpenAPIRequestValidator = require('openapi-request-validator').default;
+            
+            const prDescription = context.payload.pull_request.body || '';
+            
+            // Extract API endpoint
+            const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
+            
+            // Extract API body
+            const apiBodyMatch = prDescription.match(/- Body:\s+```json\s+([\s\S]+?)\s+```/);
+            
+            // If no API information is found, pass the check
+            if (!apiEndpointMatch || !apiBodyMatch) {
+              console.log('No API information found in PR description. Skipping validation.');
+              return;
+            }
+            
+            const apiEndpoint = apiEndpointMatch[1];
+            let apiBody;
+            
+            try {
+              apiBody = JSON.parse(apiBodyMatch[1].trim());
+            } catch (error) {
+              console.error(`Invalid JSON in API body: ${error.message}`);
+              core.setFailed(`Invalid JSON in API body: ${error.message}`);
+              return;
+            }
+            
+            console.log(`Validating API endpoint: ${apiEndpoint}`);
+            console.log(`With request body: ${JSON.stringify(apiBody)}`);
+            
+            // Fetch OpenAPI spec
+            try {
+              const openApiUrl = `${process.env.COFACTS_ADMIN_API_URL}/openapi.json`;
+              console.log(`Fetching OpenAPI spec from: ${openApiUrl}`);
+              
+              const response = await fetch(openApiUrl);
+              if (!response.ok) {
+                throw new Error(`Failed to fetch OpenAPI spec: ${response.status} ${response.statusText}`);
+              }
+              
+              const openApiSpec = await response.json();
+              
+              // Check if the endpoint exists in the spec
+              const normalizedEndpoint = apiEndpoint.startsWith('/') ? apiEndpoint : `/${apiEndpoint}`;
+              
+              if (!openApiSpec.paths[normalizedEndpoint]) {
+                console.error(`API endpoint '${apiEndpoint}' not found in OpenAPI spec`);
+                core.setFailed(`API endpoint '${apiEndpoint}' not found in OpenAPI spec`);
+                return;
+              }
+              
+              // Check if POST method exists for this endpoint
+              if (!openApiSpec.paths[normalizedEndpoint].post) {
+                console.error(`POST method not available for endpoint '${apiEndpoint}'`);
+                core.setFailed(`POST method not available for endpoint '${apiEndpoint}'`);
+                return;
+              }
+              
+              // Get the operation object
+              const operation = openApiSpec.paths[normalizedEndpoint].post;
+              
+              // Validate request body using openapi-request-validator
+              if (operation.requestBody) {
+                const validator = new OpenAPIRequestValidator({
+                  requestBody: operation.requestBody
+                });
+                
+                const request = {
+                  body: apiBody,
+                  headers: {
+                    'content-type': 'application/json'
+                  }
+                };
+                
+                const errors = validator.validateRequest(request);
+                
+                if (errors) {
+                  console.error('Request body validation failed:');
+                  console.error(JSON.stringify(errors, null, 2));
+                  core.setFailed(`Request body validation failed: ${JSON.stringify(errors)}`);
+                  return;
+                }
+              }
+              
+              // If we got here, validation passed
+              console.log('API validation successful');
+              
+            } catch (error) {
+              console.error('Error during API validation:', error);
+              core.setFailed(`Error during API validation: ${error.message}`);
+            }
