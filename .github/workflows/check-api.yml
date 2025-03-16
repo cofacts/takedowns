@@ -62,9 +62,11 @@ jobs:
             const openApiUrl = `${process.env.COFACTS_ADMIN_API_URL}/openapi.json`;
             console.log(`Fetching OpenAPI spec from: ${openApiUrl}`);
 
+            // We can assume OpenAPI spec can always be parsed. please help simplify logic here, AI!
             let response;
             try {
               response = await fetch(openApiUrl, {
+                method: 'GET',
                 headers: {
                   'CF-Access-Client-Id': process.env.COFACTS_ADMIN_CLIENT_ID,
                   'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET
