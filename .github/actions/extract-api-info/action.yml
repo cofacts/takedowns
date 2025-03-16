@@ -19,43 +19,41 @@ runs:
   steps:
     - name: Extract API info
       id: extract
-      # Use github-script@v7, AI!
-      shell: node16
-      env:
-        PR_DESCRIPTION: ${{ inputs.pr-description }}
-      run: |
-        const core = require('@actions/core');
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const prDescription = inputs.prDescription || '';
 
-        const prDescription = process.env.PR_DESCRIPTION || '';
+          // Extract API endpoint
+          const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
 
-        // Extract API endpoint
-        const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
+          // Extract API body
+          const apiBodyMatch = prDescription.match(/- Body:\s+```json\s+([\s\S]+?)\s+```/);
 
-        // Extract API body
-        const apiBodyMatch = prDescription.match(/- Body:\s+```json\s+([\s\S]+?)\s+```/);
+          // If no API information is found, set has-api-info to false
+          if (!apiEndpointMatch || !apiBodyMatch) {
+            console.log('No API information found in PR description.');
+            core.setOutput('has-api-info', 'false');
+            return;
+          }
 
-        // If no API information is found, set has-api-info to false
-        if (!apiEndpointMatch || !apiBodyMatch) {
-          console.log('No API information found in PR description.');
-          core.setOutput('has-api-info', 'false');
-          return;
-        }
+          const apiEndpoint = apiEndpointMatch[1];
+          const apiBody = apiBodyMatch[1].trim();
 
-        const apiEndpoint = apiEndpointMatch[1];
-        const apiBody = apiBodyMatch[1].trim();
+          // Validate JSON
+          try {
+            JSON.parse(apiBody);
+          } catch (error) {
+            console.error(`Invalid JSON in API body: ${error.message}`);
+            core.setOutput('has-api-info', 'false');
+            return;
+          }
 
-        // Validate JSON
-        try {
-          JSON.parse(apiBody);
-        } catch (error) {
-          console.error(`Invalid JSON in API body: ${error.message}`);
-          core.setOutput('has-api-info', 'false');
-          return;
-        }
+          console.log(`API endpoint: ${apiEndpoint}`);
+          console.log(`API body: ${apiBody}`);
 
-        console.log(`API endpoint: ${apiEndpoint}`);
-        console.log(`API body: ${apiBody}`);
-
-        core.setOutput('has-api-info', 'true');
-        core.setOutput('api-endpoint', apiEndpoint);
-        core.setOutput('api-body', apiBody);
+          core.setOutput('has-api-info', 'true');
+          core.setOutput('api-endpoint', apiEndpoint);
+          core.setOutput('api-body', apiBody);
+        inputs:
+          prDescription: ${{ inputs.pr-description }}
