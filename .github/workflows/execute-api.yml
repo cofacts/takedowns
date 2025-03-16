@@ -11,37 +11,36 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
     steps:
-      - name: Extract API info and execute API call
+      - name: Extract API info
+        id: api-info
+        uses: ./.github/actions/extract-api-info
+        with:
+          pr-description: ${{ github.event.pull_request.body }}
+      
+      # Skip the rest of the workflow if no API info was found
+      - name: Skip if no API info
+        if: steps.api-info.outputs.has-api-info != 'true'
+        run: echo "No API information found in PR description. Skipping API call."
+      
+      - name: Execute API call
+        if: steps.api-info.outputs.has-api-info == 'true'
         uses: actions/github-script@v7
         env:
           COFACTS_ADMIN_API_URL: ${{ vars.COFACTS_ADMIN_API_URL }}
           COFACTS_ADMIN_CLIENT_ID: ${{ vars.COFACTS_ADMIN_CLIENT_ID }}
           COFACTS_ADMIN_CLIENT_SECRET: ${{ secrets.COFACTS_ADMIN_CLIENT_SECRET }}
+          API_ENDPOINT: ${{ steps.api-info.outputs.api-endpoint }}
+          API_BODY: ${{ steps.api-info.outputs.api-body }}
         with:
           script: |
-            const prDescription = context.payload.pull_request.body;
-
-            // Extract API endpoint
-            const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
-            if (!apiEndpointMatch) {
-              console.log('No API endpoint found in PR description');
-              return;
-            }
-            const apiEndpoint = apiEndpointMatch[1];
-
-            // Extract API body
-            const apiBodyMatch = prDescription.match(/- Body:\s+```json\s+([\s\S]+?)\s+```/);
-            if (!apiBodyMatch) {
-              console.log('No API body found in PR description');
-              return;
-            }
-            const apiBody = apiBodyMatch[1].trim();
-
+            const apiEndpoint = process.env.API_ENDPOINT;
+            const apiBody = process.env.API_BODY;
+            
             // Construct full URL
             const apiUrl = `${process.env.COFACTS_ADMIN_API_URL}${apiEndpoint}`;
-            console.log(`Extracted API endpoint: ${apiUrl}`);
-            console.log(`Extracted API body: ${apiBody}`);
-
+            console.log(`Executing API call to: ${apiUrl}`);
+            console.log(`With request body: ${apiBody}`);
+            
             try {
               // Make API call
               const response = await fetch(apiUrl, {
