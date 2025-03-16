@@ -71,11 +71,11 @@ jobs:
                   'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET
                 }
               });
-              
+
               if (!response.ok) {
                 throw new Error(`Failed to fetch OpenAPI spec: ${response.status} ${response.statusText}`);
               }
-              
+
               openApiSpec = await response.json();
             } catch (error) {
               console.error('Error fetching or parsing OpenAPI spec:', error);
@@ -83,24 +83,21 @@ jobs:
               return;
             }
 
-            // Check if the endpoint exists in the spec
-            const normalizedEndpoint = apiEndpoint.startsWith('/') ? apiEndpoint : `/${apiEndpoint}`;
-
-            if (!openApiSpec.paths[normalizedEndpoint]) {
+            if (!openApiSpec.paths[apiEndpoint]) {
               console.error(`API endpoint '${apiEndpoint}' not found in OpenAPI spec`);
               core.setFailed(`API endpoint '${apiEndpoint}' not found in OpenAPI spec`);
               return;
             }
 
             // Check if POST method exists for this endpoint
-            if (!openApiSpec.paths[normalizedEndpoint].post) {
+            if (!openApiSpec.paths[apiEndpoint].post) {
               console.error(`POST method not available for endpoint '${apiEndpoint}'`);
               core.setFailed(`POST method not available for endpoint '${apiEndpoint}'`);
               return;
             }
 
             // Get the operation object
-            const operation = openApiSpec.paths[normalizedEndpoint].post;
+            const operation = openApiSpec.paths[apiEndpoint].post;
 
             // Validate request body using openapi-request-validator
             if (operation.requestBody) {
