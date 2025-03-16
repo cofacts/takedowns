@@ -21,6 +21,7 @@ runs:
       id: extract
       uses: actions/github-script@v7
       with:
+        result-encoding: string
         inputs:
           prDescription: ${{ inputs.pr-description }}
         script: |
