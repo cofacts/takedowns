@@ -121,7 +121,6 @@ ${tableRows.join('\n')}
     const prDescription = `This PR was created by Takedown Bot
 
 Takedown command:
-- Visit https://admin-api.cofacts.tw/moderation
 - API: `/moderation/blockUser`
 - Body:
   \`\`\`json
