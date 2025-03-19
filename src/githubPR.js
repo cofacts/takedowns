@@ -121,10 +121,11 @@ ${tableRows.join('\n')}
     const prDescription = `This PR was created by Takedown Bot
 
 Takedown command:
-Visit https://admin-api.cofacts.tw/moderation
-\`\`\`
-{"userId":"${userId}", "blockedReason":"https://github.com/cofacts/takedowns/blob/master/${fileName}"}
-\`\`\`
+- API: `/moderation/blockUser`
+- Body:
+  \`\`\`json
+    {"userId":"${userId}", "blockedReason":"https://github.com/cofacts/takedowns/blob/master/${fileName}"}
+  \`\`\`
 `;
 
     // fetch target branch

@@ -1,0 +1,126 @@
+name: Validate API Call Against OpenAPI Spec
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  extract-api-info:
+    runs-on: ubuntu-latest
+    outputs:
+      has-api-info: ${{ steps.api-info.outputs.has-api-info }}
+      api-endpoint: ${{ steps.api-info.outputs.api-endpoint }}
+      api-body: ${{ steps.api-info.outputs.api-body }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract API info
+        id: api-info
+        uses: ./.github/actions/extract-api-info
+        with:
+          pr-description: ${{ github.event.pull_request.body }}
+
+      # Skip the rest of the workflow if no API info was found
+      - name: Skip if no API info
+        if: steps.api-info.outputs.has-api-info != 'true'
+        run: echo "No API information found in PR description. Skipping validation."
+
+  validate-api:
+    needs: extract-api-info
+    if: needs.extract-api-info.outputs.has-api-info == 'true'
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install openapi-request-validator
+        run: npm install openapi-request-validator
+
+      - name: Validate API against OpenAPI spec
+        uses: actions/github-script@v7
+        env:
+          COFACTS_ADMIN_API_URL: ${{ vars.COFACTS_ADMIN_API_URL }}
+          COFACTS_ADMIN_CLIENT_ID: ${{ vars.COFACTS_ADMIN_CLIENT_ID }}
+          COFACTS_ADMIN_CLIENT_SECRET: ${{ secrets.COFACTS_ADMIN_CLIENT_SECRET }}
+          API_ENDPOINT: ${{ needs.extract-api-info.outputs.api-endpoint }}
+          API_BODY: ${{ needs.extract-api-info.outputs.api-body }}
+        with:
+          script: |
+            const OpenAPIRequestValidator = require('openapi-request-validator').default;
+
+            const apiEndpoint = process.env.API_ENDPOINT;
+            const apiBody = JSON.parse(process.env.API_BODY);
+
+            console.log(`Validating API endpoint: ${apiEndpoint}`);
+            console.log(`With request body: ${JSON.stringify(apiBody)}`);
+
+            // Fetch OpenAPI spec
+            const openApiUrl = `${process.env.COFACTS_ADMIN_API_URL}/openapi.json`;
+            console.log(`Fetching OpenAPI spec from: ${openApiUrl}`);
+
+            let openApiSpec;
+            try {
+              const response = await fetch(openApiUrl, {
+                method: 'GET',
+                headers: {
+                  'CF-Access-Client-Id': process.env.COFACTS_ADMIN_CLIENT_ID,
+                  'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET
+                }
+              });
+
+              if (!response.ok) {
+                throw new Error(`Failed to fetch OpenAPI spec: ${response.status} ${response.statusText}`);
+              }
+
+              openApiSpec = await response.json();
+            } catch (error) {
+              console.error('Error fetching or parsing OpenAPI spec:', error);
+              core.setFailed(`Error with OpenAPI spec: ${error.message}`);
+              return;
+            }
+
+            if (!openApiSpec.paths[apiEndpoint]) {
+              console.error(`API endpoint '${apiEndpoint}' not found in OpenAPI spec`);
+              core.setFailed(`API endpoint '${apiEndpoint}' not found in OpenAPI spec`);
+              return;
+            }
+
+            // Check if POST method exists for this endpoint
+            if (!openApiSpec.paths[apiEndpoint].post) {
+              console.error(`POST method not available for endpoint '${apiEndpoint}'`);
+              core.setFailed(`POST method not available for endpoint '${apiEndpoint}'`);
+              return;
+            }
+
+            // Get the operation object
+            const operation = openApiSpec.paths[apiEndpoint].post;
+
+            // Validate request body using openapi-request-validator
+            if (operation.requestBody) {
+              const validator = new OpenAPIRequestValidator({
+                requestBody: operation.requestBody
+              });
+
+              const request = {
+                body: apiBody,
+                headers: {
+                  'content-type': 'application/json'
+                }
+              };
+
+              const errors = validator.validateRequest(request);
+
+              if (errors) {
+                console.error('Request body validation failed:');
+                console.error(JSON.stringify(errors, null, 2));
+                core.setFailed(`Request body validation failed: ${JSON.stringify(errors)}`);
+                return;
+              }
+            }
+
+            // If we got here, validation passed
+            console.log('API validation successful');

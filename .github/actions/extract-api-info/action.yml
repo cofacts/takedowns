@@ -1,0 +1,59 @@
+name: "Extract API Info"
+description: "Extract API endpoint and body from PR description"
+inputs:
+  pr-description:
+    description: "The PR description to extract API info from"
+    required: true
+outputs:
+  api-endpoint:
+    description: "The extracted API endpoint"
+    value: ${{ steps.extract.outputs.api-endpoint }}
+  api-body:
+    description: "The extracted API body"
+    value: ${{ steps.extract.outputs.api-body }}
+  has-api-info:
+    description: "Whether API info was found in the PR description"
+    value: ${{ steps.extract.outputs.has-api-info }}
+runs:
+  using: "composite"
+  steps:
+    - name: Extract API info
+      id: extract
+      uses: actions/github-script@v7
+      env:
+        PR_DESCRIPTION: ${{ inputs.pr-description }}
+      with:
+        script: |
+          const prDescription = process.env.PR_DESCRIPTION || '';
+
+          // Extract API endpoint
+          const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
+
+          // Extract API body
+          const apiBodyMatch = prDescription.match(/- Body:\s+```json\s+([\s\S]+?)\s+```/);
+
+          // If no API information is found, set has-api-info to false
+          if (!apiEndpointMatch || !apiBodyMatch) {
+            console.log('No API information found in PR description.');
+            core.setOutput('has-api-info', 'false');
+            return;
+          }
+
+          const apiEndpoint = apiEndpointMatch[1];
+          const apiBody = apiBodyMatch[1].trim();
+
+          // Validate JSON
+          try {
+            JSON.parse(apiBody);
+          } catch (error) {
+            console.error(`Invalid JSON in API body: ${error.message}`);
+            core.setOutput('has-api-info', 'false');
+            return;
+          }
+
+          console.log(`API endpoint: ${apiEndpoint}`);
+          console.log(`API body: ${apiBody}`);
+
+          core.setOutput('has-api-info', 'true');
+          core.setOutput('api-endpoint', apiEndpoint);
+          core.setOutput('api-body', apiBody);
