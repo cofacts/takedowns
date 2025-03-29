@@ -12,27 +12,6 @@ const langfuse = new Langfuse({
   enabled: true, // set to false to disable sending events
 });
 
-const trace = langfuse.trace({
-  name: 'Openai spam detection',
-  userId: 'takedown-bot',
-  tags: [process.env.ENV || 'development'],
-});
-
-const openai = observeOpenAI(
-  new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
-  {
-    clientInitParams: {
-      secretKey: process.env.LANGFUSE_SECRET_KEY,
-      publicKey: process.env.LANGFUSE_PUBLIC_KEY,
-      baseUrl: process.env.LANGFUSE_BASEURL,
-      requestTimeout: 10000,
-    },
-
-    generationName: 'Openai spam detection',
-    parent: trace,
-  }
-);
-
 const modelName = 'gpt-4o-mini';
 const temperature = 0;
 const systemPrompt = [
@@ -146,30 +125,14 @@ export async function getSpamList(replies) {
   const spamList = [];
 
   const promises = replies.map(async (node) => {
-    const prompt = [
-      {
-        role: 'user',
-        content: [
-          {
-            type: 'text',
-            text: `${node.text}`,
-          },
-        ],
-      },
-    ];
-    const completion = await openai.beta.chat.completions.parse({
-      model: modelName,
-      temperature,
-      messages: [...systemPrompt, ...fewShotExamples, ...prompt],
-      response_format: zodResponseFormat(schema, 'spam_reasoning'),
-    });
+    const data = await detectSpamContent(node.text);
 
-    const message = completion.choices[0].message;
+    const message = data.parsedCompletion.choices[0].message;
     if (message.refusal) {
       console.error('Open AI Refusal:', message.refusal);
     } else {
       const outputJSON = message.parsed;
-      // console.log('generatedContent:', outputJSON);
+      console.log('generatedContent:', outputJSON);
 
       if (outputJSON.isSecondScamOrSexuallyContent) {
         spamList.push({ ...node, reason: outputJSON.reason });
@@ -177,6 +140,51 @@ export async function getSpamList(replies) {
     }
   });
   await Promise.all(promises);
-  await openai.flushAsync();
+  await langfuse.flushAsync();
   return spamList;
 }
+
+export async function detectSpamContent(text) {
+  const prompt = [
+    {
+      role: 'user',
+      content: [
+        {
+          type: 'text',
+          text: `${text}`,
+        },
+      ],
+    },
+  ];
+  const trace = langfuse.trace({
+    name: 'Openai spam detection',
+    userId: 'takedown-bot',
+    environment: process.env.ENV || 'development',
+  });
+
+  const openai = observeOpenAI(
+    new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+    {
+      clientInitParams: {
+        secretKey: process.env.LANGFUSE_SECRET_KEY,
+        publicKey: process.env.LANGFUSE_PUBLIC_KEY,
+        baseUrl: process.env.LANGFUSE_BASEURL,
+        requestTimeout: 10000,
+      },
+      // traceId,
+      generationName: 'Openai spam detection',
+      parent: trace,
+    }
+  );
+  const parsedCompletion = await openai.beta.chat.completions.parse({
+    model: modelName,
+    temperature,
+    messages: [...systemPrompt, ...fewShotExamples, ...prompt],
+    response_format: zodResponseFormat(schema, 'spam_reasoning'),
+  });
+  return { parsedCompletion, trace, openai };
+}
+
+// export function getLangfuseObject() {
+//   return [langfuse, trace];
+// }
