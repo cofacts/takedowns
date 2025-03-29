@@ -121,10 +121,10 @@ const fewShotExamples = [
   },
 ];
 
-export async function getSpamList(replies) {
+export async function getSpamList(contentObjects) {
   const spamList = [];
 
-  const promises = replies.map(async (node) => {
+  const promises = contentObjects.map(async (node) => {
     const data = await detectSpamContent(node.text, langfuse);
 
     const message = data.parsedCompletion.choices[0].message;
