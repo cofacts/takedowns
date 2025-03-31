@@ -1,4 +1,4 @@
-import { detectSpamContent } from '../getSpamList.js';
+import { detectSpamContent } from '../../getSpamList.js';
 import { Langfuse } from 'langfuse';
 
 const langfuse = new Langfuse({

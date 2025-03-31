@@ -31,6 +31,10 @@
     "setupFilesAfterEnv": [
       "./test/setup.js"
     ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/manual/"
+    ],
     "snapshotFormat": {
       "printBasicPrototype": true,
       "escapeString": true
