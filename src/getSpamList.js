@@ -125,7 +125,7 @@ export async function getSpamList(replies) {
   const spamList = [];
 
   const promises = replies.map(async (node) => {
-    const data = await detectSpamContent(node.text);
+    const data = await detectSpamContent(node.text, langfuse);
 
     const message = data.parsedCompletion.choices[0].message;
     if (message.refusal) {
@@ -144,7 +144,7 @@ export async function getSpamList(replies) {
   return spamList;
 }
 
-export async function detectSpamContent(text) {
+export async function detectSpamContent(text, langfuse) {
   const prompt = [
     {
       role: 'user',
@@ -160,6 +160,7 @@ export async function detectSpamContent(text) {
     name: 'Openai spam detection',
     userId: 'takedown-bot',
     environment: process.env.ENV || 'development',
+    input: `${text}`,
   });
 
   const openai = observeOpenAI(
@@ -182,9 +183,6 @@ export async function detectSpamContent(text) {
     messages: [...systemPrompt, ...fewShotExamples, ...prompt],
     response_format: zodResponseFormat(schema, 'spam_reasoning'),
   });
+  trace.update({ output: parsedCompletion.choices[0].message.parsed });
   return { parsedCompletion, trace, openai };
 }
-
-// export function getLangfuseObject() {
-//   return [langfuse, trace];
-// }
