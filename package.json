@@ -43,6 +43,6 @@
     "lint": "eslint src/.",
     "lint:fix": "eslint --fix src/.",
     "takedown": "node src/takedown.js",
-    "test": "NODE_ENV=test jest --runInBand"
+    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
   }
 }
