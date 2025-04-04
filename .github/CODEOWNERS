@@ -1,0 +1,11 @@
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @cofacts/moderators will be requested for review when
+# someone opens a pull request.
+
+*       @cofacts/moderators
+
+
+# left /src folder reviewer default empty
+
+/src/
