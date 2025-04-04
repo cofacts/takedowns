@@ -206,6 +206,10 @@ export async function getAllPRs() {
 
 // https://octokit.github.io/rest.js/v21/#actions-update-environment-variable
 export async function updateEnvironmentVariable(env, varName, value) {
+  if (!env || env === 'development') {
+    console.log('Skip updating GitHub environment variable.');
+    return;
+  }
   const octokit = await getGithubApp();
   await octokit.rest.actions.updateEnvironmentVariable({
     owner,
