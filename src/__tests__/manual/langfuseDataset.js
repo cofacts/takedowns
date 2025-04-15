@@ -37,8 +37,6 @@ for (const item of dataset.items) {
     // console.log('generatedContent:', outputJSON);
 
     if (item.expectedOutput) {
-      console.log('');
-      console.log('trace.score');
       // evaluate the output to compare different runs more easily
       data.trace.score({
         name: 'takedown_bool',
