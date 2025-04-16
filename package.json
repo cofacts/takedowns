@@ -17,8 +17,28 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
-    "langfuse": "^3.30.2",
-    "prettier": "^2.8.6"
+    "jest": "^29.7.0",
+    "langfuse": "^3.36.0",
+    "openai": "^4.77.3",
+    "prettier": "^2.8.6",
+    "zod": "^3.24.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "src"
+    ],
+    "setupFilesAfterEnv": [
+      "./test/setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/manual/"
+    ],
+    "snapshotFormat": {
+      "printBasicPrototype": true,
+      "escapeString": true
+    }
   },
   "engines": {
     "node": ">=18.0.0"
@@ -26,6 +46,7 @@
   "scripts": {
     "lint": "eslint src/.",
     "lint:fix": "eslint --fix src/.",
-    "takedown": "node src/takedown.js"
+    "takedown": "node src/takedown.js",
+    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
   }
 }
