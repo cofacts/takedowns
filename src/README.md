@@ -1,6 +1,6 @@
 # Cofacts takedowns script
 
-[![CI](https://github.com/cofacts/takedowns/actions/workflows/ci.yml/badge.svg)](https://github.com/cofacts/takedowns/actions/workflows/ci.yml) [![Coverage Status](https://coveralls.io/repos/github/cofacts/takedowns/badge.svg?branch=main)](https://coveralls.io/github/cofacts/takedowns?branch=main)
+[![CI](https://github.com/cofacts/takedowns/actions/workflows/ci.yml/badge.svg)](https://github.com/cofacts/takedowns/actions/workflows/ci.yml) [![Coverage Status](https://coveralls.io/repos/github/cofacts/takedowns/badge.svg?branch=master)](https://coveralls.io/github/cofacts/takedowns?branch=master)
 
 ## Moderation
 
