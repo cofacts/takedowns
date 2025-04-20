@@ -72,7 +72,9 @@ export async function createPullRequest({
     }).format(new Date(createdAt));
 
     const tableRows = userReplyHistory.map(({ id, text, createdAt }) => {
-      const trimmedContent = `[${ellipsis(text)}](${
+      // `\n` character will break github markdown table, remove it
+      const textWithoutNewlines = text.replace(/\n/g, ' ');
+      const trimmedContent = `[${ellipsis(textWithoutNewlines)}](${
         process.env.COFACTS_URL
       }/reply/${id})`;
       const contentDate = Intl.DateTimeFormat('zh-TW', {
