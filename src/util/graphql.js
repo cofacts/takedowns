@@ -242,6 +242,7 @@ export async function* getReplyRequestsInBatch(from, to) {
                 articleId
                 userId
                 createdAt
+                status
                 reason
                 user {
                   id
@@ -257,10 +258,11 @@ export async function* getReplyRequestsInBatch(from, to) {
     );
 
     yield ListReplyRequests.edges
-      .filter(() => true) // No status filter for reply requests
+      .filter(({ node }) => node.status !== 'BLOCKED')
       .map(({ node }) => ({
         ...node,
         text: node.reason, // Map reason to text to reuse getSpamList
+        id: node.articleId, // Override id with articleId for createPullRequest
       }));
 
     // next graphql call should go after the last cursor of this page
@@ -295,7 +297,11 @@ export async function getUserReplyRequests(uid) {
     `,
     { uid }
   );
-  return ListReplyRequests.edges.map(({ node }) => node);
+  return ListReplyRequests.edges.map(({ node }) => ({
+    ...node,
+    text: node.reason, // Map reason to text to reuse getSpamList
+    id: node.articleId, // Override id with articleId for createPullRequest
+  }));
 }
 
 /**
