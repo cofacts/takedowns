@@ -91,6 +91,7 @@ async function processSpamContentFromDate(
           spamContent: text,
           createdAt,
           userHistory,
+          contentType,
         });
       })
     );
