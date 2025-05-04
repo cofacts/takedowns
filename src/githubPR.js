@@ -45,7 +45,7 @@ const textMap = {
 
 const communityBuilderTypeMap = {
   reply: 0,
-  article: 0, // TODO: should update this value if CommunityBuilder support article
+  article: 2, // this type shows both replyRequest reason and article
   replyRequest: 2,
 };
 
