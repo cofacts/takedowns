@@ -13,8 +13,10 @@ import {
   updateEnvironmentVariable,
 } from './githubPR.js';
 
+// Set of user IDs that have already been processed through PRs
 const knownUsers = new Set();
-const seenTexts = new Set();
+// Set to track combinations of user ID and text to prevent duplicate processing of the same content from the same user
+const seenUserTexts = new Set();
 
 async function initKnownUsers() {
   const list = await getAllPRs();
@@ -52,11 +54,14 @@ async function processSpamContentFromDate(
       new Date().toISOString()
     )) {
       console.log(`${contentType}s: `, contentItems);
-      // filter out known users and duplicate texts
+      // filter out known users and duplicate texts from same user
       const filteredContentItems = contentItems.filter((item) => {
-        if (!knownUsers.has(item.user.id) && !seenTexts.has(item.text)) {
-          seenTexts.add(item.text);
-          return true;
+        if (item.text && !knownUsers.has(item.user.id)) {
+          const textWithUserId = `${item.user.id}:${item.text}`;
+          if (!seenUserTexts.has(textWithUserId)) {
+            seenUserTexts.add(textWithUserId);
+            return true;
+          }
         }
         return false;
       });
