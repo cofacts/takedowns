@@ -37,13 +37,45 @@ function ellipsis(text, maxLength = 40) {
   return `${trimmed.slice(0, maxLength - 2)}⋯⋯`;
 }
 
+const textMap = {
+  reply: '查核回應',
+  article: '送出訊息',
+  replyRequest: '回報補充',
+};
+
+const communityBuilderTypeMap = {
+  reply: 0,
+  article: 2, // this type shows both replyRequest reason and article
+  replyRequest: 2,
+};
+
+const urlMap = {
+  reply: 'reply',
+  article: 'article',
+  replyRequest: 'article', // Currently there is no direct link to replyRequest, so use article instead
+};
+
+/**
+ * Creates a pull request for takedown of spam content
+ *
+ * @param {Object} params - Parameters for creating a PR
+ * @param {string} params.id - The ID of the spam content
+ * @param {string} params.userId - The ID of the user who created the spam content
+ * @param {string} params.userName - The name of the user who created the spam content
+ * @param {string} params.spamContent - The content that was marked as spam
+ * @param {string} params.createdAt - The creation date of the spam content
+ * @param {Array} params.userHistory - Array of user's previous content
+ * @param {string} params.contentType - Type of content ('reply', 'article', or 'replyRequest')
+ * @returns {Object} The created pull request data
+ */
 export async function createPullRequest({
   id,
   userId,
   userName,
   spamContent,
   createdAt,
-  userReplyHistory,
+  userHistory,
+  contentType,
 }) {
   try {
     const octokit = await getGithubApp();
@@ -56,10 +88,12 @@ export async function createPullRequest({
     const today = new Date();
     const [year, month, day] = formatter.format(today).split('/');
 
-    const spammerNameWithLinkToTheirWork = `[${userName}](https://cofacts.github.io/community-builder/#/editorworks?showAll=1&day=365&userId=${userId})`;
-    const trimmedContent = `[查核回應](${
+    const spammerNameWithLinkToTheirWork = `[${userName}](https://cofacts.github.io/community-builder/#/editorworks?type=${communityBuilderTypeMap[contentType]}&day=365&userId=${userId})`;
+
+    // Currently there is no direct link to replyRequest, so use article and articleId instead
+    const trimmedContent = `[${textMap[contentType]}](${
       process.env.COFACTS_URL
-    }/reply/${id})<br>\`${ellipsis(spamContent, 300)}\``;
+    }/${urlMap[contentType]}/${id})<br>\`${ellipsis(spamContent, 300)}\``;
     const contentDate = Intl.DateTimeFormat('zh-TW', {
       year: 'numeric',
       month: 'numeric',
@@ -71,10 +105,12 @@ export async function createPullRequest({
       timeZone: 'Asia/Taipei',
     }).format(new Date(createdAt));
 
-    const tableRows = userReplyHistory.map(({ id, text, createdAt }) => {
-      const trimmedContent = `[${ellipsis(text)}](${
+    const tableRows = userHistory.map(({ id, text, createdAt }) => {
+      // `\n` character will break github markdown table, remove it
+      const textWithoutNewlines = text.replace(/\n/g, ' ');
+      const trimmedContent = `[${ellipsis(textWithoutNewlines)}](${
         process.env.COFACTS_URL
-      }/reply/${id})`;
+      }/${urlMap[contentType]}/${id})`;
       const contentDate = Intl.DateTimeFormat('zh-TW', {
         year: 'numeric',
         month: 'numeric',
