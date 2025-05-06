@@ -3,9 +3,21 @@ name: CI test
 on:
   # Triggers the workflow on push or pull request events
   push:
+    # Only run under listed folders
+    paths:
+      - '*'           # files in root
+      - 'src/**' 
+      - 'test/**'
+      - '.github/**'
     branches:
       - master
   pull_request:
+    # Only run under listed folders
+    paths:
+      - '*'           # files in root
+      - 'src/**' 
+      - 'test/**'
+      - '.github/**'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
