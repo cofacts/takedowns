@@ -6,6 +6,9 @@
 *       @cofacts/moderators
 
 
-# left /src folder reviewer default empty
+# left development related files and folders reviewer default empty
 
 /src/
+/test/
+/.github/
+/*
