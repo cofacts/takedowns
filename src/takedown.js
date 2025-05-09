@@ -148,7 +148,7 @@ async function main() {
     new Date().toISOString()
   );
   await processSpamRepliesFromDate(lastScannedAt);
-  await processSpamArticlesFromDate(lastScannedAt);
+  // await processSpamArticlesFromDate(lastScannedAt);
   await processSpamReplyRequestsFromDate(lastScannedAt);
 }
 
