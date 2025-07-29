@@ -1,10 +1,10 @@
 import {
   getRepliesInBatch,
   getUserReplies,
-  getArticlesInBatch,
+  getArticlesInBatch, // eslint-disable-line no-unused-vars
   getReplyRequestsInBatch,
   getUserReplyRequests,
-  getUserArticles,
+  getUserArticles, // eslint-disable-line no-unused-vars
 } from './util/graphql.js';
 import { getSpamList } from './getSpamList.js';
 import {
@@ -34,7 +34,7 @@ async function initKnownUsers() {
 /**
  * Generic function to process potential spam content from a specific date
  * @param {Date} date - Date to scan from
- * @param {Function} getBatchFn - Batch retrieval function to fetch content (getRepliesInBatch, getArticlesInBatch, etc.)
+ * @param {Function} getBatchFn - Batch retrieval function to fetch content (getRepliesInBatch, getArticlesInBatch, getReplyRequestsInBatch)
  * @param {Function} getUserHistoryFn - function to get user history of specific type for creating PRs
  * @param {string} contentType - Type of content being processed ('reply', 'article', or 'replyRequest')
  * @returns {Promise<Array>} - List of processed unique spam items
@@ -117,6 +117,7 @@ async function processSpamRepliesFromDate(date) {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 // Use the generic function for articles
 async function processSpamArticlesFromDate(date) {
   return processSpamContentFromDate(

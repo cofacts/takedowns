@@ -119,6 +119,7 @@ export async function getUserReplies(uid) {
   return ListReplies.edges.map(({ node }) => node);
 }
 
+// eslint-disable-next-line no-unused-vars
 // Async generator that gets a batch of articles with createdAt between `from` and `to`.
 // The generator encapsulates complex pagination logic so that the function using it can focus on
 // batch processing logic without worrying pagination.
@@ -304,6 +305,7 @@ export async function getUserReplyRequests(uid) {
   }));
 }
 
+// eslint-disable-next-line no-unused-vars
 /**
  * Get user's latest 10 articles
  */
