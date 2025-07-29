@@ -220,6 +220,7 @@ export async function getAllPRs() {
         q: `repo:${owner}/${repo} is:pr in:title "Takedown spam user"`,
         per_page: 100, // get 100 pr per page
         page: page,
+        advanced_search: true, // Use advanced search to avoid deprecation warning
       });
 
       hasPRs = prs.length > 0;
