@@ -39,19 +39,19 @@ function ellipsis(text, maxLength = 40) {
 
 const textMap = {
   reply: '查核回應',
-  article: '送出訊息',
+  article: '送出訊息', // eslint-disable-line no-unused-vars
   replyRequest: '回報補充',
 };
 
 const communityBuilderTypeMap = {
   reply: 0,
-  article: 2, // this type shows both replyRequest reason and article
+  article: 2, // this type shows both replyRequest reason and article // eslint-disable-line no-unused-vars
   replyRequest: 2,
 };
 
 const urlMap = {
   reply: 'reply',
-  article: 'article',
+  article: 'article', // eslint-disable-line no-unused-vars
   replyRequest: 'article', // Currently there is no direct link to replyRequest, so use article instead
 };
 
