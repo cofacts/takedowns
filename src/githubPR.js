@@ -39,19 +39,16 @@ function ellipsis(text, maxLength = 40) {
 
 const textMap = {
   reply: '查核回應',
-  article: '送出訊息',
   replyRequest: '回報補充',
 };
 
 const communityBuilderTypeMap = {
   reply: 0,
-  article: 2, // this type shows both replyRequest reason and article
   replyRequest: 2,
 };
 
 const urlMap = {
   reply: 'reply',
-  article: 'article',
   replyRequest: 'article', // Currently there is no direct link to replyRequest, so use article instead
 };
 
@@ -65,7 +62,7 @@ const urlMap = {
  * @param {string} params.spamContent - The content that was marked as spam
  * @param {string} params.createdAt - The creation date of the spam content
  * @param {Array} params.userHistory - Array of user's previous content
- * @param {string} params.contentType - Type of content ('reply', 'article', or 'replyRequest')
+ * @param {string} params.contentType - Type of content ('reply', 'replyRequest')
  * @returns {Object} The created pull request data
  */
 export async function createPullRequest({

@@ -119,76 +119,6 @@ export async function getUserReplies(uid) {
   return ListReplies.edges.map(({ node }) => node);
 }
 
-// Async generator that gets a batch of articles with createdAt between `from` and `to`.
-// The generator encapsulates complex pagination logic so that the function using it can focus on
-// batch processing logic without worrying pagination.
-//
-export async function* getArticlesInBatch(from, to) {
-  // Get pageInfo outside the loop since it's expensive for rumors-api
-  const {
-    data: {
-      ListArticles: {
-        pageInfo: { lastCursor },
-      },
-    },
-  } = await graphql(
-    `
-      query ListArticlesStat($from: String!, $to: String!) {
-        ListArticles(
-          filter: { createdAt: { GT: $from, LT: $to } }
-          orderBy: { createdAt: DESC }
-        ) {
-          pageInfo {
-            lastCursor
-          }
-        }
-      }
-    `,
-    { from, to }
-  );
-
-  let after = null;
-  while (lastCursor !== after) {
-    // Actually loads `edges` and process.
-    const {
-      data: { ListArticles },
-    } = await graphql(
-      `
-        query ArticlesBetween($from: String!, $to: String!, $after: String) {
-          ListArticles(
-            filter: { createdAt: { GT: $from, LT: $to } }
-            after: $after
-            first: 25
-            orderBy: { createdAt: DESC }
-          ) {
-            edges {
-              node {
-                id
-                text
-                status
-                createdAt
-                user {
-                  id
-                  name
-                }
-              }
-              cursor
-            }
-          }
-        }
-      `,
-      { from, to, after }
-    );
-
-    yield ListArticles.edges
-      .filter(({ node }) => node.status !== 'BLOCKED')
-      .map(({ node }) => node);
-
-    // next graphql call should go after the last cursor of this page
-    after = ListArticles.edges[ListArticles.edges.length - 1].cursor;
-  }
-}
-
 /**
  * Async generator that gets a batch of reply requests with createdAt between `from` and `to`.
  * The generator encapsulates complex pagination logic so that the function using it can focus on
@@ -302,33 +232,4 @@ export async function getUserReplyRequests(uid) {
     text: node.reason, // Map reason to text to reuse getSpamList
     id: node.articleId, // Override id with articleId for createPullRequest
   }));
-}
-
-/**
- * Get user's latest 10 articles
- */
-export async function getUserArticles(uid) {
-  const {
-    data: { ListArticles },
-  } = await graphql(
-    `
-      query GetUserArticles($uid: String!) {
-        ListArticles(
-          filter: { userId: $uid }
-          first: 10
-          orderBy: { createdAt: DESC }
-        ) {
-          edges {
-            node {
-              id
-              text
-              createdAt
-            }
-          }
-        }
-      }
-    `,
-    { uid }
-  );
-  return ListArticles.edges.map(({ node }) => node);
 }
