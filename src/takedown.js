@@ -1,10 +1,8 @@
 import {
   getRepliesInBatch,
   getUserReplies,
-  getArticlesInBatch,
   getReplyRequestsInBatch,
   getUserReplyRequests,
-  getUserArticles,
 } from './util/graphql.js';
 import { getSpamList } from './getSpamList.js';
 import {
@@ -34,9 +32,9 @@ async function initKnownUsers() {
 /**
  * Generic function to process potential spam content from a specific date
  * @param {Date} date - Date to scan from
- * @param {Function} getBatchFn - Batch retrieval function to fetch content (getRepliesInBatch, getArticlesInBatch, etc.)
+ * @param {Function} getBatchFn - Batch retrieval function to fetch content (getRepliesInBatch, getReplyRequestsInBatch)
  * @param {Function} getUserHistoryFn - function to get user history of specific type for creating PRs
- * @param {string} contentType - Type of content being processed ('reply', 'article', or 'replyRequest')
+ * @param {string} contentType - Type of content being processed ('reply', 'replyRequest')
  * @returns {Promise<Array>} - List of processed unique spam items
  */
 async function processSpamContentFromDate(
@@ -117,16 +115,6 @@ async function processSpamRepliesFromDate(date) {
   );
 }
 
-// Use the generic function for articles
-async function processSpamArticlesFromDate(date) {
-  return processSpamContentFromDate(
-    date,
-    getArticlesInBatch,
-    getUserArticles,
-    'article'
-  );
-}
-
 // Use the generic function for reply requests
 async function processSpamReplyRequestsFromDate(date) {
   return processSpamContentFromDate(
@@ -148,7 +136,6 @@ async function main() {
     new Date().toISOString()
   );
   await processSpamRepliesFromDate(lastScannedAt);
-  // await processSpamArticlesFromDate(lastScannedAt);
   await processSpamReplyRequestsFromDate(lastScannedAt);
 }
 
