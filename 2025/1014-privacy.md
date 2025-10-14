@@ -7,7 +7,7 @@ Cofacts 工作小組收到來信，要求移除以下含有當事人個人資訊
 ## 分析
 
 - 來信者為當時送這則訊息進來的人。
-- Cofacts 工作小組檢視這則訊息，發現其中包含來信者的名字、聯絡電話、LINE ID 與 Facebook 或 Instagram 個人主頁截圖。
+- Cofacts 工作小組檢視這則訊息，發現其中包含來信者親人的名字、聯絡電話、LINE ID 與 Facebook 或 Instagram 個人主頁截圖。
 
 ## 處置
 
