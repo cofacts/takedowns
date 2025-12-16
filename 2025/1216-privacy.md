@@ -1,4 +1,4 @@
-# 2024/05/21 移除訊息內隱私資訊
+# 2025/12/16 移除訊息內隱私資訊
 
 Cofacts 工作小組（Cofacts WG）收到來信表示 https://cofacts.tw/article/2cowzmwrw6etg 這則訊息涉及不實指控，造成親人名譽損害，卻缺乏事實依據。
 
