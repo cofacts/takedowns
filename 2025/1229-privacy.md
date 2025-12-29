@@ -1,4 +1,4 @@
-# 2024/07/22 移除隱私資訊
+# 2025/12/29 移除隱私資訊
 
 Cofacts 工作小組（Cofacts WG）收到來信表示 https://cofacts.tw/article/B3IFMpEBd3gcY0Lpdex3 有員工的名片圖檔，有名字與電話等隱私資訊。
 
