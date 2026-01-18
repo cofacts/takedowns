@@ -1,6 +1,6 @@
 # 2026/01/18 移除誤傳截圖
 
-Cofacts 工作小組收到來信，對方表示誤傳截圖給機器人，詢問能否直接移除，指稱的訊息是 https://cofacts.tw/article/_NXovpsBrQ7DCeIzBbMy。
+Cofacts 工作小組（Cofacts WG）收到來信，對方表示誤傳截圖給機器人，詢問能否直接移除，指稱的訊息是 https://cofacts.tw/article/_NXovpsBrQ7DCeIzBbMy。
 
 ## 判斷
 
