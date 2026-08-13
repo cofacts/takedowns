@@ -26,11 +26,11 @@ runs:
         script: |
           const prDescription = process.env.PR_DESCRIPTION || '';
 
-          // Extract API endpoint
-          const apiEndpointMatch = prDescription.match(/- API: `([^`]+)`/);
+          // Extract API endpoint (tolerate any amount of whitespace before the backtick)
+          const apiEndpointMatch = prDescription.match(/- API:\s*`([^`]+)`/);
 
-          // Extract API body
-          const apiBodyMatch = prDescription.match(/- Body:\s+```json\s+([\s\S]+?)\s+```/);
+          // Extract API body (the ```json language tag is optional)
+          const apiBodyMatch = prDescription.match(/- Body:\s+```(?:json)?\s+([\s\S]+?)\s+```/);
 
           // If no API information is found, set has-api-info to false
           if (!apiEndpointMatch || !apiBodyMatch) {
