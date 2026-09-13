@@ -19,3 +19,20 @@
 
 - 檔名：`<年>/<MMDD>-privacy.md`（同日多篇加 `-2`、`-3`）
 - 內容：來信事由與連結 → 判斷（個資確認、內容觀察、公共性與去識別化可行性）→ 處置（做了什麼、依據為何）
+
+## 換圖（選用）
+
+若處置需要把文章圖片換成遮蔽後版本，可直接把換圖指令寫進 PR 描述，merge 時會自動執行：
+
+1. WG 成員把遮蔽後的圖檔貼進這個 PR 的描述或留言（GitHub 會自動上傳，產生 `https://github.com/user-attachments/assets/<uuid>` 連結）。因為本 repo 為公開狀態，此連結未登入也能存取，Cofacts admin API 可直接 fetch。
+2. 請 coding agent 依此連結，在 PR 描述加入：
+   ```
+   - API: `/moderation/article/media`
+   - Body:
+     ```json
+     {"articleId":"<文章 ID>", "url":"<貼上後產生的連結>"}
+     ```
+   ```
+3. Moderator review 通過後 merge，換圖即在 merge 當下自動執行。
+
+一個 PR 只能執行一個指令，換圖與封鎖帳號等其他處置不能共用同一個 PR。
