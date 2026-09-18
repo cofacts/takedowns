@@ -68,11 +68,11 @@ Takedown command:
 
 1. WG 成員把遮蔽後的圖檔貼進這個 PR 的描述或留言（GitHub 會自動上傳，產生 `https://github.com/user-attachments/assets/<uuid>` 連結）。因為本 repo 為公開狀態，此連結未登入也能存取，Cofacts admin API 可直接 fetch。
 2. 請 coding agent 依此連結，在 PR 描述加入：
-   ```
+   ````
    - API: `/moderation/article/media`
    - Body:
      ```json
      {"articleId":"<文章 ID>", "url":"<貼上後產生的連結>"}
      ```
-   ```
+   ````
 3. Moderator review 通過後 merge，換圖即在 merge 當下自動執行。
