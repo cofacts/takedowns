@@ -17,7 +17,7 @@ Takedown command:
 
 解析規則見 `.github/actions/extract-api-info/action.yml`：
 
-- **endpoint 與 body 是用兩條互相獨立的正規表示式各自抓的**（不是抓「一個區塊」）：endpoint 取整份描述裡**第一個**出現的 `` - API: `...` ``，body 取整份描述裡**第一個**出現的 `- Body:` + ```json fence，兩者不需要來自同一個段落、也不需要彼此相鄰。**單獨一行 `- API:`，或單獨一個 `- Body:` + json fence，就足以劫持解析結果**——不需要湊成一個完整、看起來像指令的區塊。所以 PR 描述裡若要引用／摘錄舊 PR 或可疑內容，**不要讓引用文字裡單獨出現看起來像 `- API:` 或 ```json 的片段**，尤其查詢語法要用 ```graphql 標示、不要用 ```json。`Takedown command:` 這行文字只是給人看的，不影響解析；縮排可以自由調整，但 endpoint 一定要用反引號包住。
+- **整份 PR 描述裡，只能有這一組 `- API:` + code fence。** 引用／摘錄舊 PR 或可疑內容時，不要照抄含有 `` - API: `...` `` 這種格式的行、或緊接在 `- Body:` 後面的 code fence，即使那段引文本身不完整、不是真正要執行的指令；查詢語法一律用 ```graphql 標示，不要用 ```json。`Takedown command:` 這行文字只是給人看的，不影響解析；縮排可以自由調整，但 endpoint 一定要用反引號包住。（原因：解析時 endpoint 與 body 是各自獨立比對、沒有錨定，不要求兩者相鄰或同段，所以文件其他地方出現的同格式片段有機會被誤抓去跟真正的指令拼在一起。）
 - Body 必須是合法 JSON，否則會被**靜默跳過**（`has-api-info` 為 `false`）——這種情況下 PR 不會顯示錯誤，CI（`execute-api.yml` 本身）仍是綠燈，但實際上什麼都不會執行。**這不代表綠燈一律沒有意義**：PR 開啟／描述被編輯時，`.github/workflows/check-api.yml` 會拿 admin API 的 `openapi.json` 驗證 endpoint 是否存在、是否支援 POST、body 是否符合 schema，格式正確但 endpoint 或欄位不符 spec（例如打錯欄位名）會讓這個 check 變紅燈。
 - **一個 PR 只能執行一個指令。** 需要處置多個對象時，各自開一個 PR（公告可以共用同一篇）。
 - 一律開成可 review 的狀態，**不要開成 draft**：draft PR 不會觸發 `.github/CODEOWNERS` 的自動複核。但即使不是 draft，也不保證有人被自動請求 review——`CODEOWNERS` 目前的規則是 `*` 對到 `@cofacts/moderators`、但根目錄檔案（`/*`）另外覆寫成空 owner，所以只有 `<年>/` 子目錄底下的公告檔會自動指派複核，改動根目錄檔案（例如這份 `AGENTS.md`）不會。
