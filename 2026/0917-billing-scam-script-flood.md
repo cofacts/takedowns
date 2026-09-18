@@ -4,6 +4,7 @@
 
 ## 觀察
 
+  - **帳號**：[菔達的大安雷爾夫](https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_lIwbTx39DQbeIrK9NrT9eAnkq2hCJuFEEY_Xxrj7MtY)（userId `j4S8C_lIwbTx39DQbeIrK9NrT9eAnkq2hCJuFEEY_Xxrj7MtY`）
   - **帳號時間軸方面的觀察**：帳號於 2026/9/17 18:27:33（台灣時間）建立；53 秒後（18:28:26）開始送出訊息，至 18:28:33 為止的 6.6 秒內共送出 11 筆（10 篇新訊息 + 1 筆對既有訊息的回報補充），多筆之間間隔僅數毫秒，非真人操作可能達到的速度。
   - **內容樣態方面的觀察**：10 篇新訊息（[bjhi0max9gxb](https://cofacts.tw/article/bjhi0max9gxb)、[2bfsvk22vi84a](https://cofacts.tw/article/2bfsvk22vi84a)、[3sboujzpqj1hg](https://cofacts.tw/article/3sboujzpqj1hg)、[36knu2uzt8vlz](https://cofacts.tw/article/36knu2uzt8vlz)、[2jt17v2x8xqj0](https://cofacts.tw/article/2jt17v2x8xqj0)、[1avowttyjakrg](https://cofacts.tw/article/1avowttyjakrg)、[8o6nztdp2n9x](https://cofacts.tw/article/8o6nztdp2n9x)、[1jmhep1of9j6l](https://cofacts.tw/article/1jmhep1of9j6l)、[26aaey5zawe56](https://cofacts.tw/article/26aaey5zawe56)、[ODDprqABEY7yIwhpGqQs](https://cofacts.tw/article/ODDprqABEY7yIwhpGqQs)）依內容前後銜接，即構成一則假客服對話腳本：自稱平台客服通知「訂閱扣款異常」，援引 PCI-DSS、支付機構管理條例等說法要求核對身分、取消訂閱，並附虛構的訂閱明細與訂單編號。另 1 筆為對一篇既有通用制式訊息（[1drg5c65w1v8l](https://cofacts.tw/article/1drg5c65w1v8l)，內容為「請稍等，正在幫您查詢」）新增的回報補充。上述 11 筆之 `reason` 全為空字串。
   - **帳號全部活動方面的觀察**：`ListReplyRequests(filter: { userId: "j4S8C_lIwbTx39DQbeIrK9NrT9eAnkq2hCJuFEEY_Xxrj7MtY", statuses: [NORMAL, BLOCKED] })` 回傳 `totalCount = 11`，即帳號自建立以來的全部活動，100% 為上述投放，無任何一般查證行為。
