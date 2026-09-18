@@ -8,6 +8,7 @@ Cofacts WG 於例行監控（每小時檢視過去 1 小時內活動）中發現
 
 ## 觀察
 
+- **帳號**：[高風亮節的五股山迪](https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_l9F6b1A7DFPf_aSPjfaRTixeKIwjbPGo61f6iUiwpig)（userId `j4S8C_l9F6b1A7DFPf_aSPjfaRTixeKIwjbPGo61f6iUiwpig`）
 - **帳號時間軸方面的觀察**：帳號於 2026/9/14 17:28:12（台灣時間）建立，13 秒後（17:28:25）開始送出第一篇訊息，其後 23 篇訊息全數集中在 17:28:25.547 至 17:28:26.242 之間送出，前後僅相距 **695 毫秒**，平均每篇間隔約 30 毫秒——遠超真人逐字輸入或逐篇轉傳可能達到的速度，顯示為程式化、自動化投放。
 - **帳號活動範圍方面的觀察**：查詢該 userId 的 `ListArticles`／`ListReplyRequests`（含 `NORMAL`、`BLOCKED` 狀態），此帳號自建立以來**僅有這 23 篇訊息**，無任何查核回應或其他一般使用行為，帳號全部活動即為下述灌注行為。
 - **內容比對方面的觀察**：本案帳號送出的訊息為乾淨的敘事體文字，不含任何螢幕截圖應有的介面雜訊（時間戳記、已讀標記、電量列等）。經以其中一句下 `moreLikeThis` 反查，命中另一帳號「羅東杜魯門」於 2026/8/2 送出的[螢幕截圖 OCR 訊息](https://cofacts.tw/article/UC_Ywp8BEY7yIwhpHEG7)，逐字比對：
