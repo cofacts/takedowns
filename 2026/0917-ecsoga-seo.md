@@ -4,6 +4,7 @@
 
 ## 觀察
 
+  - **帳號**：[平和的麻豆愛琳娜](https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_d_0R160Hev3_lUTIf8rvjZo8LHzz44CQ1B5ggmoBCqw)（userId `j4S8C_d_0R160Hev3_lUTIf8rvjZo8LHzz44CQ1B5ggmoBCqw`）
   - **帳號時間軸方面的觀察**：使用者帳號於 2026/9/17 16:30:43（台灣時間）建立，帳號建立後約 0.05 秒即透過 LINE Bot 送出[訊息](https://cofacts.tw/article/3mx01thhwmee4)。
   - **內容方面的觀察**：訊息全文為電商課程招生廣告文字，開頭即以「請顧客先參考我們的電商課程喔」起始，並附外部報名連結，語氣為對「顧客」的商業招生話術，未包含任何查證問句，與 Cofacts 查證訊息的使用情境不符。
   - **帳號全部活動方面的觀察**：`ListReplyRequests(filter: { userId, statuses: [NORMAL, BLOCKED] })` 回傳 totalCount = 1，即此帳號自建立以來的全部活動，100% 為上述廣告訊息，`reason` 為空字串。
