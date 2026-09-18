@@ -4,6 +4,7 @@ Cofacts WG 於例行監控（過去 1 小時窗口，UTC 2026-09-17T11:24:00Z �
 
 ## 觀察
 
+- **帳號**：[體貼的三星巴奈特](https://cofacts.github.io/community-builder/#/editorworks?type=2&day=365&userId=j4S8C_b5dkKvxAR0OT2R5A9Zg2A17W7_OcbJEGTAD0TYWdUQM)（userId `j4S8C_b5dkKvxAR0OT2R5A9Zg2A17W7_OcbJEGTAD0TYWdUQM`）
 - **帳號時間軸方面的觀察**：帳號於 2026/9/17 20:20:58（台灣時間）建立；約 9.7 秒後（20:21:07.802）開始送出訊息，至 20:21:10.121 為止的約 2.3 秒內共送出 13 筆（4 篇新訊息 + 9 筆對既有訊息的回報補充），多筆之間間隔僅 1～3 毫秒，非真人操作可能達到的速度。
 - **內容樣態方面的觀察**：4 篇新訊息依送出順序銜接，構成另一則假客服扣款詐騙對話腳本：
 
