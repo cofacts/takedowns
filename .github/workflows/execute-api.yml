@@ -64,6 +64,8 @@ jobs:
                     'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET,
                   },
                   body,
+                  // Fail this command instead of hanging the job (and the commands after it)
+                  signal: AbortSignal.timeout(5 * 60 * 1000),
                 });
                 const text = await response.text();
                 let data = text;
@@ -76,8 +78,19 @@ jobs:
               }
             );
 
-            await comment(formatResultsComment(results));
+            // Log first, so the record survives even if posting the comment fails
+            results.forEach(({ endpoint, status, detail }, i) =>
+              console.log(`Command #${i + 1} ${endpoint}: ${status}\n${detail ?? ''}`)
+            );
+            const anyFailed = results.some(({ status }) => status !== 'SUCCESS');
 
-            if (results.some(({ status }) => status !== 'SUCCESS')) {
+            try {
+              await comment(formatResultsComment(results));
+            } catch (e) {
+              core.setFailed(`Could not post the result comment: ${e.message}`);
+              return;
+            }
+
+            if (anyFailed) {
               core.setFailed('Some API calls failed; see the PR comment.');
             }

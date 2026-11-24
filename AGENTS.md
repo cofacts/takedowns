@@ -19,8 +19,8 @@ Takedown command:
 
 - **一組指令＝一行 `- API:` 緊接著 `- Body:` 與 code fence。** 兩行都要在行首（可縮排）以 `-` 或 `*` 開頭，endpoint 要用反引號包住；中間只能有空行。`Takedown command:` 這行只是給人看的，不影響解析。
 - **一個 PR 可以放多組指令**，merge 時依出現順序逐一執行，**遇到第一個失敗就停下**，後面的不執行。同一案件的處置（例如先封鎖帳號、再復原被竄改的逐字稿）放在同一個 PR，依執行順序排列。
-- **格式錯誤時一律不執行**：`- API:` 後面沒有緊接 `- Body:`、多出沒有對應 `- API:` 的 `- Body:`、或 body 不是合法 JSON，CI（`.github/workflows/check-api.yml`）會紅燈，merge 時也不會執行任何一組指令。
-- 引用／摘錄舊 PR 或可疑內容時，用 `>` 引用或改寫，不要在行首照抄 `- API:`／`- Body:` 這種格式；查詢語法一律用 ```graphql 標示。
+- **格式錯誤時一律不執行**：`- API:` 後面沒有緊接 `- Body:`、多出沒有對應 `- API:` 的 `- Body:`、body 不是合法 JSON、endpoint 不是 `/` 開頭的路徑、用了其他清單符號（`+ API:`、`1. API:`）、或 API/Body 行出現在 HTML 註解或 code block 裡（reviewer 看不到或容易誤會），CI（`.github/workflows/check-api.yml`）都會紅燈，merge 時也不會執行任何一組指令。
+- 引用／摘錄舊 PR 或可疑內容時，用 `>` 引用或改寫；查詢語法一律用 ```graphql 標示。
 - **CI 會依照 admin API 的 OpenAPI spec 驗證每一組 body**；PR 開啟或編輯時就會跑，任一組不符合 spec 就紅燈。PR 描述裡完全沒有指令是允許的，merge 時就不會呼叫任何 API。
 - **公告檔案（`<年>/` 底下）符合 `.github/CODEOWNERS` 的規則，PR 開啟時會自動請 `@cofacts/moderators` review；draft PR 不會觸發這個自動複核。** 一律開成可 review 的狀態，不要開成 draft。
 - merge **當下**才會讀取 PR 描述；merge 之後再編輯描述不會改變已經執行的內容。

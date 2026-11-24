@@ -12,6 +12,10 @@
  * A description can contain several commands. They run in the order they appear.
  * Lines must start with `-` or `*` (after optional indentation), so quoted text such as
  * `> - API: ...` is not picked up.
+ *
+ * Anything that could run a command the reviewer did not clearly see is an error: API/Body lines
+ * inside HTML comments or code blocks, near-miss formats (`+ API:`, `1. API:`, `-API:`), and
+ * endpoints that are not plain absolute paths.
  */
 
 const API_LINE = /^[ \t]*[-*][ \t]+API:[ \t]*`([^`\n]+)`[ \t]*$/gm;
@@ -19,7 +23,57 @@ const BODY_LINE = /^[ \t]*[-*][ \t]+Body:/gm;
 
 // Right after an API line: optional blank lines, the Body line, then a fenced block.
 const BODY_AFTER_API =
-  /\n(?:[ \t]*\n)*[ \t]*[-*][ \t]+Body:[ \t]*\n(?:[ \t]*\n)*[ \t]*```(?:json)?[ \t]*\n([\s\S]*?)\n[ \t]*```/y;
+  /\n(?:[ \t]*\n)*[ \t]*[-*][ \t]+Body:[ \t]*\n(?:[ \t]*\n)*[ \t]*```(?:json)?[ \t]*\n([\s\S]*?)\n[ \t]*```[ \t]*(?=\n|$)/y;
+
+// Anything that looks like an API/Body line, including near-miss list markers.
+const LOOSE_LINE = /^[ \t]*(?:[-*+]|\d+[.)])?[ \t]*(?:API|Body)[ \t]*:/i;
+const STRICT_LINE = /^[ \t]*[-*][ \t]+(?:API|Body):/;
+const FENCE_LINE = /^[ \t]*(```|~~~)/;
+const HTML_COMMENT = /<!--[\s\S]*?(?:-->|$)/g;
+const ENDPOINT = /^\/[A-Za-z0-9/_-]+$/;
+
+/**
+ * Finds API/Body-like lines the reviewer may not see as commands.
+ * @param {string} text - description with CRLF normalized
+ * @returns {string[]} errors
+ */
+function findHiddenOrMalformedLines(text) {
+  const errors = [];
+
+  const commentsWithCommands = [...text.matchAll(HTML_COMMENT)].filter((m) =>
+    m[0].split('\n').some((line) => LOOSE_LINE.test(line.replace(/^<!--/, '')))
+  );
+  if (commentsWithCommands.length) {
+    errors.push('API/Body lines inside an HTML comment are not allowed');
+  }
+
+  let fence = null;
+  let inFence = 0;
+  let nearMiss = 0;
+  for (const line of text.replace(HTML_COMMENT, '').split('\n')) {
+    const fenceMatch = line.match(FENCE_LINE);
+    if (fenceMatch) {
+      if (!fence) fence = fenceMatch[1];
+      else if (fenceMatch[1] === fence) fence = null;
+      continue;
+    }
+    if (!LOOSE_LINE.test(line)) continue;
+    if (fence) inFence += 1;
+    else if (!STRICT_LINE.test(line)) nearMiss += 1;
+  }
+  if (inFence) {
+    errors.push(
+      `Found ${inFence} API/Body line(s) inside a code block; quote them with ">" instead`
+    );
+  }
+  if (nearMiss) {
+    errors.push(
+      `Found ${nearMiss} line(s) that look like API/Body lines but are not written as "- API:" / "- Body:"`
+    );
+  }
+
+  return errors;
+}
 
 /**
  * @param {string} description - PR description
@@ -28,14 +82,16 @@ const BODY_AFTER_API =
  *   execute any command in that case.
  */
 export function extractApiCommands(description) {
-  const text = (description || '').replace(/\r\n/g, '\n');
+  const rawText = (description || '').replace(/\r\n/g, '\n');
+  const errors = findHiddenOrMalformedLines(rawText);
+  const text = rawText.replace(HTML_COMMENT, '');
   const commands = [];
-  const errors = [];
   let consumedBodies = 0;
 
+  let commandNo = 0;
   for (const apiMatch of text.matchAll(API_LINE)) {
     const endpoint = apiMatch[1].trim();
-    const commandNo = commands.length + errors.length + 1;
+    commandNo += 1;
 
     BODY_AFTER_API.lastIndex = apiMatch.index + apiMatch[0].length;
     const bodyMatch = BODY_AFTER_API.exec(text);
@@ -46,6 +102,13 @@ export function extractApiCommands(description) {
       continue;
     }
     consumedBodies += 1;
+
+    if (!ENDPOINT.test(endpoint)) {
+      errors.push(
+        `Command #${commandNo} (${endpoint}): endpoint must be an absolute path such as /moderation/blockUser`
+      );
+      continue;
+    }
 
     const body = bodyMatch[1].trim();
     try {
@@ -111,6 +174,17 @@ export async function runApiCommands(commands, call) {
   return results;
 }
 
+const MAX_DETAIL_LENGTH = 4000;
+const MAX_COMMENT_LENGTH = 60000;
+
+function truncate(str, maxLength) {
+  return str.length <= maxLength
+    ? str
+    : `${str.slice(0, maxLength)}\n… (truncated, ${
+        str.length - maxLength
+      } more characters; see the workflow log)`;
+}
+
 const STATUS_LABEL = {
   SUCCESS: '✅ Succeeded',
   FAILED: '❌ Failed',
@@ -123,16 +197,20 @@ const STATUS_LABEL = {
  */
 export function formatResultsComment(results) {
   const failed = results.some(({ status }) => status !== 'SUCCESS');
-  const heading = failed
-    ? '❌ Some API calls failed. Commands after the failed one were not run.'
-    : `✅ All ${results.length} API call(s) executed successfully!`;
+  const skipped = results.some(({ status }) => status === 'NOT_RUN');
+  const heading = !failed
+    ? `✅ All ${results.length} API call(s) executed successfully!`
+    : skipped
+    ? '❌ An API call failed. Commands after the failed one were not run.'
+    : '❌ An API call failed.';
 
   const sections = results.map(({ endpoint, status, detail }, i) =>
     [
       `### ${i + 1}. \`${endpoint}\` — ${STATUS_LABEL[status]}`,
-      ...(detail ? ['```', detail, '```'] : []),
+      ...(detail ? ['```', truncate(detail, MAX_DETAIL_LENGTH), '```'] : []),
     ].join('\n')
   );
 
-  return [heading, ...sections].join('\n\n');
+  // GitHub rejects comments longer than 65536 characters
+  return truncate([heading, ...sections].join('\n\n'), MAX_COMMENT_LENGTH);
 }
