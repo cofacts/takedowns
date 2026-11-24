@@ -1,59 +1,42 @@
 name: "Extract API Info"
-description: "Extract API endpoint and body from PR description"
+description: "Extract admin API commands from PR description. Requires the repository to be checked out."
 inputs:
   pr-description:
-    description: "The PR description to extract API info from"
+    description: "The PR description to extract API commands from"
     required: true
 outputs:
-  api-endpoint:
-    description: "The extracted API endpoint"
-    value: ${{ steps.extract.outputs.api-endpoint }}
-  api-body:
-    description: "The extracted API body"
-    value: ${{ steps.extract.outputs.api-body }}
+  commands:
+    description: 'JSON array of {endpoint, body}, in the order they appear'
+    value: ${{ steps.extract.outputs.commands }}
+  errors:
+    description: "Newline-separated errors for malformed commands; empty when there are none"
+    value: ${{ steps.extract.outputs.errors }}
   has-api-info:
-    description: "Whether API info was found in the PR description"
+    description: "Whether at least one command was found and there are no errors"
     value: ${{ steps.extract.outputs.has-api-info }}
 runs:
   using: "composite"
   steps:
-    - name: Extract API info
+    - name: Extract API commands
       id: extract
       uses: actions/github-script@v7
       env:
         PR_DESCRIPTION: ${{ inputs.pr-description }}
       with:
         script: |
-          const prDescription = process.env.PR_DESCRIPTION || '';
+          const { extractApiCommands } = await import(
+            `${process.env.GITHUB_WORKSPACE}/src/apiCommands.js`
+          );
+          const { commands, errors } = extractApiCommands(process.env.PR_DESCRIPTION);
 
-          // Extract API endpoint (tolerate any amount of whitespace before the backtick)
-          const apiEndpointMatch = prDescription.match(/- API:\s*`([^`]+)`/);
+          commands.forEach(({ endpoint, body }, i) =>
+            console.log(`Command #${i + 1}: ${endpoint}\n${body}`)
+          );
+          errors.forEach((error) => console.error(error));
 
-          // Extract API body (the ```json language tag is optional)
-          const apiBodyMatch = prDescription.match(/- Body:\s+```(?:json)?\s+([\s\S]+?)\s+```/);
-
-          // If no API information is found, set has-api-info to false
-          if (!apiEndpointMatch || !apiBodyMatch) {
-            console.log('No API information found in PR description.');
-            core.setOutput('has-api-info', 'false');
-            return;
-          }
-
-          const apiEndpoint = apiEndpointMatch[1];
-          const apiBody = apiBodyMatch[1].trim();
-
-          // Validate JSON
-          try {
-            JSON.parse(apiBody);
-          } catch (error) {
-            console.error(`Invalid JSON in API body: ${error.message}`);
-            core.setOutput('has-api-info', 'false');
-            return;
-          }
-
-          console.log(`API endpoint: ${apiEndpoint}`);
-          console.log(`API body: ${apiBody}`);
-
-          core.setOutput('has-api-info', 'true');
-          core.setOutput('api-endpoint', apiEndpoint);
-          core.setOutput('api-body', apiBody);
+          core.setOutput('commands', JSON.stringify(commands));
+          core.setOutput('errors', errors.join('\n'));
+          core.setOutput(
+            'has-api-info',
+            commands.length > 0 && errors.length === 0 ? 'true' : 'false'
+          );

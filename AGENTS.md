@@ -15,14 +15,16 @@ Takedown command:
   ```
 ````
 
-解析規則見 `.github/actions/extract-api-info/action.yml`：
+解析規則見 `src/apiCommands.js`：
 
-- **整份 PR 描述裡，只能有這一組 `- API:` + code fence。** 引用／摘錄舊 PR 或可疑內容時，不要照抄含有 `` - API: `...` `` 這種格式的行、或緊接在 `- Body:` 後面的 code fence，即使那段引文本身不完整、不是真正要執行的指令；查詢語法一律用 ```graphql 標示，不要用 ```json。`Takedown command:` 這行文字只是給人看的，不影響解析；縮排可以自由調整，但 endpoint 一定要用反引號包住。（原因：解析時 endpoint 與 body 是各自獨立比對、沒有錨定，不要求兩者相鄰或同段，所以文件其他地方出現的同格式片段有機會被誤抓去跟真正的指令拼在一起。）
-- **CI 會依照 admin API 的 OpenAPI spec 驗證 body**（`.github/workflows/check-api.yml`，PR 開啟或編輯時就會跑）；不符合 spec 會讓這個 check 變紅燈。PR 描述裡若沒放這組指令、或 body 不是合法 JSON，merge 時就單純不會執行任何 API 呼叫——這個狀態本身是允許的，CI 不會因此報錯。
-- **一個 PR 只能執行一個指令。** 需要處置多個對象時，各自開一個 PR（公告可以共用同一篇）。
+- **一組指令＝一行 `- API:` 緊接著 `- Body:` 與 code fence。** 兩行都要在行首（可縮排）以 `-` 或 `*` 開頭，endpoint 要用反引號包住；中間只能有空行。`Takedown command:` 這行只是給人看的，不影響解析。
+- **一個 PR 可以放多組指令**，merge 時依出現順序逐一執行，**遇到第一個失敗就停下**，後面的不執行。同一案件的處置（例如先封鎖帳號、再復原被竄改的逐字稿）放在同一個 PR，依執行順序排列。
+- **格式錯誤時一律不執行**：`- API:` 後面沒有緊接 `- Body:`、多出沒有對應 `- API:` 的 `- Body:`、或 body 不是合法 JSON，CI（`.github/workflows/check-api.yml`）會紅燈，merge 時也不會執行任何一組指令。
+- 引用／摘錄舊 PR 或可疑內容時，用 `>` 引用或改寫，不要在行首照抄 `- API:`／`- Body:` 這種格式；查詢語法一律用 ```graphql 標示。
+- **CI 會依照 admin API 的 OpenAPI spec 驗證每一組 body**；PR 開啟或編輯時就會跑，任一組不符合 spec 就紅燈。PR 描述裡完全沒有指令是允許的，merge 時就不會呼叫任何 API。
 - **公告檔案（`<年>/` 底下）符合 `.github/CODEOWNERS` 的規則，PR 開啟時會自動請 `@cofacts/moderators` review；draft PR 不會觸發這個自動複核。** 一律開成可 review 的狀態，不要開成 draft。
 - merge **當下**才會讀取 PR 描述；merge 之後再編輯描述不會改變已經執行的內容。
-- API 呼叫的結果只會留一則 PR comment（成功 ✅／失敗 ❌），**workflow job 本身一律顯示成功**，需要另外確認 comment 內容才知道是否真的執行成功。
+- 執行結果會留一則 PR comment，逐組列出成功 ✅／失敗 ❌／未執行 ⏭️；有任何一組失敗時 workflow job 也會紅燈。merge 之後無法重跑，失敗的部分要另外處理（例如再開一個只含剩餘指令的 PR）。
 
 ## 公告格式
 
@@ -74,4 +76,5 @@ Takedown command:
      {"articleId":"<文章 ID>", "url":"<貼上後產生的連結>"}
      ```
    ````
+   多張圖片就每張各寫一組，**每組都要有自己的 `- API:` 行**；只有一行 `- API:`、底下接多個 `- Body:` 會被視為格式錯誤。
 3. Moderator review 通過後 merge，換圖即在 merge 當下自動執行。

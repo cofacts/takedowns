@@ -20,66 +20,64 @@ jobs:
         with:
           pr-description: ${{ github.event.pull_request.body }}
 
-      # Skip the rest of the workflow if no API info was found
-      - name: Skip if no API info
-        if: steps.api-info.outputs.has-api-info != 'true'
-        run: echo "No API information found in PR description. Skipping API call."
-
-      - name: Execute API call
-        if: steps.api-info.outputs.has-api-info == 'true'
+      - name: Execute API calls
+        if: steps.api-info.outputs.has-api-info == 'true' || steps.api-info.outputs.errors != ''
         uses: actions/github-script@v7
         env:
           COFACTS_ADMIN_API_URL: ${{ vars.COFACTS_ADMIN_API_URL }}
           COFACTS_ADMIN_CLIENT_ID: ${{ vars.COFACTS_ADMIN_CLIENT_ID }}
           COFACTS_ADMIN_CLIENT_SECRET: ${{ secrets.COFACTS_ADMIN_CLIENT_SECRET }}
-          API_ENDPOINT: ${{ steps.api-info.outputs.api-endpoint }}
-          API_BODY: ${{ steps.api-info.outputs.api-body }}
+          API_COMMANDS: ${{ steps.api-info.outputs.commands }}
+          API_ERRORS: ${{ steps.api-info.outputs.errors }}
         with:
           script: |
-            const apiEndpoint = process.env.API_ENDPOINT;
-            const apiBody = process.env.API_BODY;
-
-            // Construct full URL
-            const apiUrl = `${process.env.COFACTS_ADMIN_API_URL}${apiEndpoint}`;
-            console.log(`Executing API call to: ${apiUrl}`);
-            console.log(`With request body: ${apiBody}`);
-
-            try {
-              // Make API call
-              const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'CF-Access-Client-Id': process.env.COFACTS_ADMIN_CLIENT_ID,
-                  'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET
-                },
-                body: apiBody
+            const { runApiCommands, formatResultsComment } = await import(
+              `${process.env.GITHUB_WORKSPACE}/src/apiCommands.js`
+            );
+            const comment = (body) =>
+              github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body,
               });
 
-              const responseData = await response.json();
+            // Malformed commands: run none of them
+            if (process.env.API_ERRORS) {
+              await comment(
+                `❌ No API call was executed: the PR description has malformed commands.\n\n\`\`\`\n${process.env.API_ERRORS}\n\`\`\``
+              );
+              core.setFailed(process.env.API_ERRORS);
+              return;
+            }
 
-              // Check if response is successful
-              if (!response.ok) {
-                throw new Error(`API call failed with status ${response.status}: ${JSON.stringify(responseData)}`);
+            const results = await runApiCommands(
+              JSON.parse(process.env.API_COMMANDS),
+              async (endpoint, body) => {
+                const apiUrl = `${process.env.COFACTS_ADMIN_API_URL}${endpoint}`;
+                console.log(`Executing API call to: ${apiUrl}\nWith request body: ${body}`);
+                const response = await fetch(apiUrl, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'CF-Access-Client-Id': process.env.COFACTS_ADMIN_CLIENT_ID,
+                    'CF-Access-Client-Secret': process.env.COFACTS_ADMIN_CLIENT_SECRET,
+                  },
+                  body,
+                });
+                const text = await response.text();
+                let data = text;
+                try {
+                  data = JSON.parse(text);
+                } catch {
+                  // Keep non-JSON responses (e.g. an HTML error page) as text
+                }
+                return { ok: response.ok, status: response.status, data };
               }
+            );
 
-              // Comment on PR with API response
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.payload.pull_request.number,
-                body: `✅ API call executed successfully!\n\n**Response:**\n\`\`\`json\n${JSON.stringify(responseData, null, 2)}\n\`\`\``
-              });
+            await comment(formatResultsComment(results));
 
-              console.log('API call successful and PR comment added');
-            } catch (error) {
-              console.error('Error executing API call:', error);
-
-              // Comment on PR with error
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.payload.pull_request.number,
-                body: `❌ API call failed!\n\n**Error:**\n\`\`\`\n${error.message}\n\`\`\``
-              });
+            if (results.some(({ status }) => status !== 'SUCCESS')) {
+              core.setFailed('Some API calls failed; see the PR comment.');
             }
