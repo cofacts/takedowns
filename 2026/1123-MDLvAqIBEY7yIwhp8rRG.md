@@ -15,7 +15,8 @@
 |---|---|
 | 2026/11/23 12:23:36 | [台中定點茶賴GG883691 台中潭子區定點台中潭子區定點台中潭子區定點台中⋯⋯](https://cofacts.tw/reply/3jKlBqIBEY7yIwhpKLlt) |
 
-經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
+經 Cofacts WG 研判，此使用者近期之所有內容均違反使用者條款（例如不斷進行廣告行為，並把他人影音／圖片訊息的逐字稿整篇換成廣告：[XTKW8aEBEY7yIwhpXpTH](https://cofacts.tw/article/XTKW8aEBEY7yIwhpXpTH)），故循[前例](https://github.com/cofacts/takedowns/blob/master/2021/1125-2nd-spam.md)，針對被檢舉人進行下面處置：
 1. 於資料庫中註記此使用者為被封鎖的使用者，檢附此公告的連結。
 2. 隱藏此使用者的所有「回應」、「補充」、與「評價」。
 3. 透過被檢舉人登入過的瀏覽器，仍可在網站上看到自己的回應、補充與評價。
+4. 將上述被竄改的逐字稿還原為竄改前的版本（2026/11/27 執行）。
